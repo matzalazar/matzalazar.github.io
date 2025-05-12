@@ -36,7 +36,7 @@ Este proyecto consta de varios repositorios que conforman un ecosistema de inici
 
 **_(En producción desde 2020)_.**
 
-📁 Por confidencialidad, estos repositorios son privados. [Aquí podés leer más sobre su desarrollo.](./administracion) 
+📁 Por confidencialidad, estos repositorios son privados. [Aquí podés leer más sobre su desarrollo.](./projects/administracion) 
  
 Si te interesa ver el código, no dudes en contactarme. Comparto acceso bajo NDA.
 
@@ -56,6 +56,6 @@ Pensado principalmente para análisis de material fílmico proveniente de cámar
 
 **_(En producción desde 2025)_.**
 
-📁 Por confidencialidad, estos repositorios son privados. [Aquí podés leer más sobre su desarrollo.](./forense) 
+📁 Por confidencialidad, estos repositorios son privados. [Aquí podés leer más sobre su desarrollo.](./projects/forense) 
  
 Si te interesa ver el código, no dudes en contactarme. Comparto acceso bajo NDA.
