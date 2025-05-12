@@ -1,0 +1,24 @@
+title: Matías Zalazar
+url: "https://matzalazar.com"
+baseurl: ""
+
+markdown: kramdown
+#ins_logo: "./bits-logo.png"
+
+tracking_id: #
+
+footer: yes
+footer_url: "https://github.com/matzalazar"
+footer_text: "Made it with Jekyll"
+
+sass:
+    style: compressed
+    sass_dir: _sass
+
+nav:
+ - name: "Inicio"
+   link: ""
+ - name: "Proyectos"
+   link: "projects"
+ - name: "Formación"
+   link: "studies"
