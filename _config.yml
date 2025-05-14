@@ -15,9 +15,15 @@ sass:
     style: compressed
     sass_dir: _sass
 
+collections:
+  posts:
+    output: true
+
 nav:
  - name: "Inicio"
    link: ""
+ - name: "Blog"
+   link: "blog" 
  - name: "Proyectos"
    link: "projects"
  - name: "Formación"
