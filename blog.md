@@ -1,9 +1,8 @@
 ---
 layout: default
-title: Blog
 ---
 
-<h2>📝 Blog</h2>
+## 📝 Blog
 
 <ul>
   {% for post in site.posts %}
