@@ -1,12 +1,23 @@
-<!-- _layouts/post.html -->
 ---
 layout: default
 ---
 
 <article class="post">
-  <h1>{{ page.title }}</h1>
-  <p><small>{{ page.date | date: "%d/%m/%Y" }}</small></p>
-  <div>
+  <header>
+    <h2>{{ page.title }}</h2>
+    <p><small>{{ page.date | date: "%d/%m/%Y" }}</small></p>
+    {% if page.categories %}
+      <p><small>Categorías: {{ page.categories | join: ", " }}</small></p>
+    {% endif %}
+  </header>
+
+  <div class="post-content">
     {{ content }}
   </div>
+
+  <hr>
+
+  <footer>
+    <p><a href="{{ site.baseurl }}/blog">← Volver al blog</a></p>
+  </footer>
 </article>
