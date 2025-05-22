@@ -25,6 +25,7 @@ Comenzamos con dos modelos fundamentales: `Persona` y `Sindicato`. Cada persona 
 
 ```python
 # empleados/models.py
+
 class Persona(models.Model):
     nombre = models.CharField(max_length=100, default='')
     apellido = models.CharField(max_length=100, default='')
@@ -36,6 +37,7 @@ La lógica no debe estar en los modelos, sino separada. En `utils.py` definimos:
 
 ```python
 # empleados/utils.py
+
 from datetime import datetime, date, time, timedelta
 from dataclasses import dataclass
 from pathlib import Path
