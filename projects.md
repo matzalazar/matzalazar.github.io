@@ -18,6 +18,16 @@ Automatización en Python con Selenium para recorrer cursos del campus virtual M
 
 ---
 
+### Sistema Integral de Gestión Empresarial
+
+WebApp desarrollada en **Django** para empresas de servicios. Permite gestionar Recursos Humanos, Stock de indumentaria, Bienes Patrimoniales (Vehículos y Herramientas), Gestión Operativa (cobertura de turnos por lotes de horas) y Gestión Comercial (Cotizaciones, Órdenes de Venta, Facturación). Cuenta con múltiples validaciones cruzadas para mantener consistencia y trazabilidad completa mediante un módulo de auditoría compatible con ISO 9001. Dashboard dinámico por rol, flujos personalizables y control sindical integrado.
+
+*Stack*: Python · Django · PostgreSQL · TailwindCSS
+
+📁 Por confidencialidad, este repositorio es privado. [Aquí podés leer más sobre su desarrollo.](./projects/gestion) 
+
+---
+
 ### Gestor de Turnos y Distribución
 
 Este proyecto consta de varios repositorios que conforman un ecosistema de iniciativas destinadas a la gestión integral de servicios de Policía Adicional en el ámbito de la Provincia de Buenos Aires. Aunque puede ser adaptado para distintos ámbitos de aplicación que posean lógicas similares.
