@@ -7,7 +7,13 @@ layout: default
 - **Tecnicatura en Programación**  
   *UPSO — En curso*
 
-- **Certificación en Machine Learning** · UTN · 2025 · _En curso_ 
+- **The Bits and Bytes of Computer Networking** · Google · 2025
+  
+  Fundamentos de redes TCP/IP y OSI, dispositivos, direccionamiento IP, enrutamiento, servicios como DNS/DHCP/VPN, redes inalámbricas y solución de problemas.
+
+- **Certificación en Machine Learning** · UTN · 2025 · _Sobresaliente_  
+  
+  Enfoque en modelos supervisados (regresión, SVM, K-NN) y no supervisados (clustering, PCA, Manifold Learning). Técnicas de optimización y transformación de datos.
 
 - **Certificación en Data Engineering** · UTN · 2025 · _Sobresaliente_  
 
