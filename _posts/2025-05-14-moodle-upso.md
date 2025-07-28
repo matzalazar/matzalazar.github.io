@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Moodle Downloader: una solución headless con Selenium para entornos educativos"
+title: "Moodle Downloader: una solución headless con Selenium"
 date: 2025-05-14
 categories: blog
 ---
