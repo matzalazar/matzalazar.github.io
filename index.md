@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## 👋 ¡Hola! Soy Matías
+## ¡Hola! Soy Matías
 
 Programador con base en Bahía Blanca, Argentina.  
 
