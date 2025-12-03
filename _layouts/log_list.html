@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+{% assign contentwonl = content | strip_newlines %} 
+{% unless contentwonl == ""  %} <br /> {% endunless %} 
+
+{%- if site.logs.size > 0 -%}
+  <div class="log-container">
+    {%- for post in site.logs | sort: "date" | reverse limit:5 -%} 
+      <div class="log-note">
+        {%- assign date_format = "%Y-%m-%d" -%}
+        <p class="meta">{{ post.date | date: date_format }}</p>
+        
+        {{ post.content }} 
+        
+      </div>
+    {%- endfor -%}
+  </div>
+
+{%- else -%}
+  <p>No hay notas breves disponibles.</p>
+{%- endif -%}

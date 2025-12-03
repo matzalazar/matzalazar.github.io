@@ -1,0 +1,129 @@
+/* ========================================================================= */
+/* ESTILOS DE PORTADA                             */
+/* ========================================================================= */
+
+/* Reduce el espacio debajo del H1 en la home */
+body .container main h1 {
+  margin-bottom: 1rem;
+}
+
+/* Ajusta el interlineado y el margen vertical de párrafos en la home (GENERAL) */
+body .container main p {
+  line-height: 1.35; 
+  margin: 0.35rem 0;
+}
+
+/* Asegura que el primer párrafo esté aún más pegado al título H1 */
+body .container main h1 + p {
+  margin-top: 0.25rem;
+}
+
+/* Marco minimalista para el bloque dinámico (box.html) */
+/* Marco minimalista para el bloque dinámico (box.html) */
+.box {
+  border: 1px dashed var(--base-color);
+  border-radius: 8px;
+  padding: 0.75rem 0.75rem;
+  margin: 1rem 0;
+}
+
+/* Aumenta el margen superior del primer box que sigue a un párrafo */
+body .container main p + .box {
+    margin-top: 2.5rem; /* Aumenta este valor (e.g., 2rem, 2.5rem, 3rem) para crear una clara separación */
+}
+
+/* ========================================================================= */
+/* ESTILOS DE BLOQUES DINÁMICOS                      */
+/* ========================================================================= */
+
+/* Aplicamos compacidad a las listas dentro de todas las secciones dinámicas */
+#ahora-leyendo ul,
+#estudios ul,
+#github ul { /* Asumiendo que GitHub también usará <ul> */
+  margin: 1rem 0 0 1.1rem;
+  padding: 0;
+}
+
+/* Espacio reducido entre cada ítem de lista dentro de los boxes */
+#ahora-leyendo li,
+#estudios li,
+#github li {
+  margin: 0.2rem 0;
+}
+
+/* --- Corrección de Especificidad para el Pie de Box (Historial Link) --- */
+
+/* Usamos más selectores para asegurar que esta regla sobrescriba la regla general de <p> */
+.box p.box-link-footer {
+  text-align: right;
+  margin-top: 2.5rem !important; /* Usamos !important por si acaso, aunque la especificidad debería bastar. Puedes probar sin él primero. */
+  margin-bottom: 0 !important; /* Eliminamos el margen inferior de la p */
+  font-size: 0.85em; 
+}
+
+/* Estilo sutil para el enlace */
+.box p.box-link-footer a {
+  text-decoration: none; 
+  /* color: var(--highlight-color);  Puedes añadir un color de acento si usas variables */
+}
+
+/* ========================================================================= */
+/* ESTILOS DEL BLOG                             */
+/* ========================================================================= */
+
+.log-note {
+    /* Define un espacio sutil debajo de cada nota (margen como separador) */
+    margin-bottom: 30px; 
+    /* padding-bottom: 10px;  Mantengo esta línea comentada como opción */
+}
+
+/* Asegura que la última nota de la lista no tenga margen extra */
+.log-container .log-note:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Override para BLOQUES DE CÓDIGO --- */
+
+/* --- ARREGLO DOBLE RECUADRO CÓDIGO JEKYLL --- */
+
+/* 1. Anula el <div> exterior para hacerlo invisible */
+div.highlight {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  /* El margen lo manejará el <pre> de adentro */
+  margin: 0 !important; 
+}
+
+/* 2. Estiliza el <pre> interior (esta es tu caja principal) */
+/* Aquí aplicamos tus estilos Y los de rougify */
+div.highlight pre.highlight {
+  /* Tus estilos de caja */
+  border: 1px solid #444;
+  border-radius: 8px;        /* Tus bordes redondeados */
+
+  /* El espaciado y márgenes correctos */
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;             /* El padding interno */
+
+  /* El scroll */
+  overflow-x: auto;
+
+  /* NOTA: El 'background' y 'color' del código */
+  /* los tomará del CSS de rougify que ya tienes. */
+}
+
+/* 3. Anula el <code> (por si acaso) */
+/* Nos aseguramos de que no tenga fondo ni borde propio */
+div.highlight pre.highlight code {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  /* Estilos de fuente */
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+

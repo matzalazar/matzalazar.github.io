@@ -1,0 +1,18 @@
+# scripts/blog-build.service
+# Copiar como: /etc/systemd/system/blog-build.service
+
+[Unit]
+Description=Builder diario del sitio Jekyll desde datos del tracker
+After=personal-track.service
+Wants=personal-track.service
+Requires=network-online.target
+
+[Service]
+Type=oneshot
+User=matzalazar              # usuario dueño del repo y de la key de git
+Group=matzalazar
+WorkingDirectory=/home/matzalazar/matzalazar.github.io
+ExecStart=/usr/local/bin/run_daily_build.sh
+
+[Install]
+WantedBy=multi-user.target

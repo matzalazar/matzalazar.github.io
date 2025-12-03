@@ -1,0 +1,13 @@
+# scripts/blog-build.timer
+# Copiar como: /etc/systemd/system/blog-build.timer
+
+[Unit]
+Description=Timer diario para builder de sitio
+
+[Timer]
+OnCalendar=*-*-* 07:15
+Persistent=true
+Unit=blog-build.service
+
+[Install]
+WantedBy=timers.target

@@ -1,30 +1,82 @@
 ---
-layout: default
+title: /home
+layout: home
+permalink: /
 ---
 
-## ¡Hola! Soy Matías
+Hola.
 
-Programador con base en Bahía Blanca, Argentina.  
+Soy Matías y vivo en Bahía Blanca, Argentina.
 
-Trabajo en proyectos que automatizan procesos, optimizan flujos de datos y generan herramientas útiles para entornos reales, tanto públicos como privados.
+**Ciberseguridad**, **automatización** <a href="#footnote-auto" class="footnote-ref">*</a> y **ciencia de datos**.  
 
-Actualmente me especializo en:
+Con **Python**, para hacer más con menos.  
 
-- **Automatización & RPA**  
-  Desarrollo de sistemas que interactúan con interfaces gráficas o APIs para reducir tareas repetitivas. Trabajo con Flet, Selenium y scripts CLI.
+{% assign reading_items = site.data.reading %}
+{% if reading_items and reading_items != empty %}
+  {% capture contenido_lectura %}
+  <div id="ahora-leyendo">
+    ¿Qué estoy leyendo?
+    <ul>
+    {% for b in reading_items limit:3 %}
+      <li>
+        {{ b.titulo }} de {% if b.autor %} {{ b.author }}{% endif %}
+        {% if b.progress %} ({{ b.progress }}%){% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+    <p class="box-link-footer"><a href="https://www.goodreads.com/matzalazar">Goodreads →</a></p>
+  </div>
+  {% endcapture %}
+  {% include box.html content=contenido_lectura %}
+{% endif %}
 
-- **Ciencia de datos**  
-  Análisis exploratorio, modelado predictivo y construcción de pipelines con datos estructurados o semiestructurados. Uso habitual de Python, Pandas, Scikit-learn, Spark y Airflow.
+{% assign studies = site.data.studies %}
+{% if studies.coursera or studies.upso.en_curso %}
+  {% capture contenido_estudios %}
+  <div id="estudios">
+    ¿Qué estoy estudiando?
+    <ul>
+    {% for s in studies.coursera %}
+      <li>
+        {{ s.title }} — ({{ s.percent }}%)
+      </li>
+    {% endfor %}
 
-- **Backend web**  
-  Desarrollo de aplicaciones robustas con Django, APIs REST y bases de datos PostgreSQL. Despliegue en producción sobre VPS o entornos híbridos.
+    {% for s in studies.upso.en_curso %}
+      <li>
+        {{ s.nombre | capitalize }} — ({{ s.estado }})
+      </li>
+    {% endfor %}
+    </ul>
+    <p class="box-link-footer"><a href="/about">Más sobre mí →</a></p>
+  </div>
+  {% endcapture %}
+  {% include box.html content=contenido_estudios %}
+{% endif %}
 
-Mi enfoque es modular, con soluciones adaptadas a contextos reales: desde scripts automatizados hasta ecosistemas completos en producción.
+{% assign work_data = site.data.work %}
 
-💡 Podés revisar algunos de mis proyectos [acá](./projects).
+{% if work_data and work_data.commits %}
+  
+  {% capture contenido_github %}
+  
+  {% assign total_commits = work_data.commits %}
+  {% assign total_repos = work_data.repos %}
 
----
+  <div id="github">
+    
+    ¿En qué estoy trabajando?
+    
+    <p>
+      **{{ total_commits }}** commits en **{{ total_repos }}** repositorios.
+    </p>
 
-## 📬 Contacto
+    <p class="box-link-footer"><a href="https://github.com/matzalazar">Github →</a></p>
+  </div>
 
-[LinkedIn](https://linkedin.com/in/matzalazar) · [GitHub](https://github.com/matzalazar) · matias.zalazar@icloud.com
+  {% endcapture %}
+  
+  {% include box.html content=contenido_github %}
+
+{% endif %}

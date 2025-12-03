@@ -2,7 +2,7 @@
 layout: post
 title: "Cómo gestionar Convenios Colectivos de Trabajo en Django"
 date: 2025-05-21
-categories: blog
+tags: [documentacion, servidor, guia]
 ---
 
 ## Cómo gestionar Convenios Colectivos de Trabajo en Django
