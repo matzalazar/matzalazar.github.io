@@ -4,12 +4,4 @@ coursera:
 - title: Execution, persistence, privilege escalation and evasion
   percent: 4
 upso:
-  en_curso:
-  - nombre: GESTIÓN EMPRESARIAL EMPRENDEDORA
-    estado: En curso
-  - nombre: PROGRAMACIÓN ORIENTADA A OBJETOS F.P.
-    estado: En curso
-  - nombre: PROGRAMACIÓN PYTHON AVANZADA
-    estado: En curso
-  - nombre: REDES Y COMUNICACIONES
-    estado: En curso
+  en_curso: []
