@@ -1,0 +1,10 @@
+<footer>
+  {% if page.url == '/' or page.url == '/about' %}
+  {{ site.footer }}
+    {% if site.data.meta.last_update %}
+      <p id="footnote-auto" class="footnote-text">
+        * Esta web se actualizó sin intervención humana el {{ site.data.meta.last_update }}
+      </p>
+    {% endif %}
+  {% endif %}
+</footer>

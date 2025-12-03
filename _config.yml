@@ -2,29 +2,26 @@ title: Matías Zalazar
 url: "https://matzalazar.com"
 baseurl: ""
 
-markdown: kramdown
-#ins_logo: "./bits-logo.png"
+header_pages:
+  - index.md
+  - articles.md
+  - log.md
+  - about.md
 
-tracking_id: #
-
-footer: yes
-footer_url: "https://github.com/matzalazar"
-footer_text: "Made it with Jekyll"
-
-sass:
-    style: compressed
-    sass_dir: _sass
+footer: 'Podés escribirme un <a href="mailto:matias.zalazar@icloud.com">mail</a> o conectarme en <a href="https://www.linkedin.com/in/matzalazar/">linkedin</a>'
 
 collections:
-  posts:
+  articles:
+    output: true 
+    permalink: /article/:name/
+  logs:
     output: true
+    permalink: /log/:name/
 
-nav:
- - name: "Inicio"
-   link: ""
- - name: "Blog"
-   link: "blog" 
- - name: "Proyectos"
-   link: "projects"
- - name: "Formación"
-   link: "studies"
+kramdown:
+  input: GFM
+  math_engine: mathjax
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
