@@ -8,18 +8,6 @@ date: 2025-07-28
 
 ## Introducción
 
-Esta es una fórmula en bloque:
-
-$$
-\int_0^\infty e^{-x^2} dx = \frac{\sqrt{\pi}}{2}
-$$
-
-$$
-4*3
-$$
-
-Y el texto sigue abajo.
-
 En Argentina, millones de routers entregados por proveedores de Internet vienen configurados de fábrica con contraseñas que aparentan ser complejas, pero que siguen **patrones predecibles y fácilmente explotables**. Una de las combinaciones más frecuentes es:
 
 `0141234567`
