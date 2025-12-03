@@ -412,6 +412,11 @@ def update_cv_markdown() -> None:
     lines.append(build_front_matter(fm).rstrip("\n"))
     lines.append("# Sobre mí\n")
 
+    # Botón ligero para descargar/imprimir como PDF desde el navegador
+    lines.append(
+        '<p class="print-controls"><button class="print-btn" onclick="window.print()">Descargar PDF</button></p>'
+    )
+
     if headline:
         lines.append(f"**{headline}**\n")
 
