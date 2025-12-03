@@ -1,11 +1,11 @@
 {%- assign default_paths = site.html_pages | map: 'path' -%}
 {%- assign page_paths = site.header_pages | default: default_paths -%}
 <header>
-  <div class="menu" style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 0;">
+  <div class="menu">
     
-    <span class="brand">matias</span>
+    <span class="brand">{{ site.title | default: "matias zalazar" }}</span>
 
-    <ul style="display: flex; list-style: none; margin: 0; padding: 0; gap: 15px;">
+    <ul class="menu-links">
       {%- for path in page_paths -%}
         {%- assign my_page = site.pages | where: "path", path | first -%}
         {%- if my_page.title -%}
