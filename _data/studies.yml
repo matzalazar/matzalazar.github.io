@@ -1,7 +1,7 @@
 coursera:
+- title: Combinatorics and Probability
+  percent: 45
 - title: Execution, persistence, privilege escalation and evasion
   percent: 50
-- title: Combinatorics and Probability
-  percent: 26
 upso:
   en_curso: []
