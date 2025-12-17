@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Intereses Indebidos"
+date: 2025-12-17
+---
+
 # Cuando un pago “en término” termina generando intereses
 
 ### Un problema clásico de timezones en sistemas financieros
