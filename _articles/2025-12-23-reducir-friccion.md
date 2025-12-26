@@ -250,9 +250,6 @@ journalctl --user -u git-autopull.service -b
 cat ~/.local/state/git-autopull/last-run.log
 ```
 
-
----
-
 Este enfoque puede complementarse con una estructura de directorios consistente (para que “tres máquinas” se sientan como una).
 
 La otra mitad de este problema no es el pull. Es la consistencia.
