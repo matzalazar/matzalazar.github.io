@@ -1,7 +1,13 @@
 coursera:
-- title: Python for Command-and-control, Exfiltration and Impact
-  percent: 89
 - title: Combinatorics and Probability
-  percent: 71
+  percent: 73
+- title: Advanced Python - Reconnaissance, offered by Infosec, COURSE
+  percent: 100
+- title: Establishing Command-and-Control and Finding Credentials, offered by Infosec,
+    COURSE
+  percent: 100
+- title: Introduction to Computers and Operating Systems and Security, offered by
+    Microsoft, COURSE
+  percent: 100
 upso:
   en_curso: []
