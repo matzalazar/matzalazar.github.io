@@ -1,8 +1,6 @@
 coursera:
-- title: Combinatorics and Probability
-  percent: 73
-- title: Advanced Python - Reconnaissance, offered by Infosec, COURSE
-  percent: 100
+- title: Advanced Python - Reconnaissance
+  percent: 14
 - title: Establishing Command-and-Control and Finding Credentials, offered by Infosec,
     COURSE
   percent: 100
