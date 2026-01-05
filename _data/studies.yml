@@ -1,8 +1,8 @@
 coursera:
-- title: Introduction to Graph Theory
-  percent: 5
 - title: Advanced Python - Reconnaissance
-  percent: 29
+  percent: 36
+- title: Introduction to Graph Theory
+  percent: 21
 - title: Establishing Command-and-Control and Finding Credentials, offered by Infosec,
     COURSE
   percent: 100
