@@ -6,7 +6,6 @@ permalink: /about
 
 # About
 
-<p class="print-controls"><button class="print-btn" onclick="window.print()">Descargar PDF</button></p>
 Desarrollador de software orientado al backend y la automatización de procesos.
 
 Trabajo principalmente con Python en el diseño de soluciones eficientes, seguras y escalables, integrando herramientas de datos y flujos automatizados en entornos Linux.
