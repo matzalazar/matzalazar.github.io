@@ -28,7 +28,7 @@ except NameError:
     REPO_DIR = Path(".").resolve()
 
 # Directorio base con datos crudos del tracker (FHS prod en la Pi; override con env)
-RAW_DATA_DIR = Path(os.getenv("TRACKER_RAW_DATA", "/var/lib/personal-track"))
+RAW_DATA_DIR = Path(os.getenv("TRACKER_RAW_DATA", "/home/matzalazar/Projects/Personal/personal-tracker/"))
 
 # Directorio con notas de Obsidian que se publican en el blog (ruta en la Pi; override con env)
 OBSIDIAN_NOTES_PATH = Path(
@@ -117,6 +117,26 @@ def clean_markdown_text(text: str) -> str:
     text = re.sub(r"\[cite_start\]", "", text)
     text = re.sub(r"\[cite_end\]", "", text)
     text = re.sub(r"^[ \t]*•[ \t]+", "- ", text, flags=re.MULTILINE)
+    
+    # Filtrar líneas no deseadas del JSON de LinkedIn
+    lines = text.split("\n")
+    filtered_lines = []
+    for line in lines:
+        line_lower = line.lower().strip()
+        # Filtrar líneas de ubicación, aptitudes, credenciales, etc.
+        if any([
+            line_lower.startswith("aptitudes:"),
+            line_lower.startswith("id de la credencial"),
+            line_lower.startswith("nota:"),
+            line_lower.startswith("expedición:"),
+            "· presencial" in line_lower,
+            "· en remoto" in line_lower,
+            line_lower.endswith(".pdf"),
+        ]):
+            continue
+        filtered_lines.append(line)
+    
+    text = "\n".join(filtered_lines)
     text = re.sub(r"\n{3,}", "\n\n", text)
     return text.strip()
 
@@ -393,24 +413,45 @@ def update_cv_markdown() -> None:
     if linkedin_data is None:
         return
 
+    # El JSON puede ser una lista con un único diccionario [{...}]
+    if isinstance(linkedin_data, list):
+        if len(linkedin_data) > 0 and isinstance(linkedin_data[0], dict):
+            linkedin_data = linkedin_data[0]
+        else:
+            print("[WARN] LinkedIn JSON es una lista vacía o inválida")
+            return
+    
     if not isinstance(linkedin_data, dict):
+        print(f"[WARN] LinkedIn JSON tiene formato inesperado: {type(linkedin_data)}")
         return
 
     headline = linkedin_data.get("headline") or linkedin_data.get("title") or ""
     summary = (linkedin_data.get("summary") or linkedin_data.get("about") or linkedin_data.get("description") or "")
     summary = clean_markdown_text(str(summary))
+    
+    # Experience section
     positions = linkedin_data.get("positions") or linkedin_data.get("experience") or []
     if not isinstance(positions, list):
         positions = []
+    
+    # Education section
+    education = linkedin_data.get("education") or []
+    if not isinstance(education, list):
+        education = []
+    
+    # Certifications section
+    certifications = linkedin_data.get("certifications") or []
+    if not isinstance(certifications, list):
+        certifications = []
 
     lines: List[str] = []
     fm = {
+        "title": "/about",
         "layout": "page",
-        "title": "Sobre mí",
-        "permalink": "/about/",
+        "permalink": "/about",
     }
     lines.append(build_front_matter(fm).rstrip("\n"))
-    lines.append("# Sobre mí\n")
+    lines.append("\n# About\n")
 
     # Botón ligero para descargar/imprimir como PDF desde el navegador
     lines.append(
@@ -424,29 +465,94 @@ def update_cv_markdown() -> None:
         lines.append(summary)
         lines.append("")
 
+    # Experience section
     if positions:
-        lines.append("## Experiencia reciente\n")
+        lines.append("## Experiencia Laboral:\n")
         for pos in positions[:6]:
             if not isinstance(pos, dict):
                 continue
             title = (pos.get("title") or pos.get("position") or pos.get("role") or "Rol sin título")
-            company = pos.get("company") or pos.get("organization") or ""
-            start = pos.get("start_date") or pos.get("from")
-            end = pos.get("end_date") or pos.get("to") or "Actualidad"
+            # LinkedIn JSON usa 'subtitle' para la empresa
+            company = pos.get("company") or pos.get("organization") or pos.get("subtitle") or ""
+            # LinkedIn JSON usa 'meta' para las fechas completas
+            dates = pos.get("meta") or ""
+            if not dates:
+                start = pos.get("start_date") or pos.get("from")
+                end = pos.get("end_date") or pos.get("to") or "Actualidad"
+                if start:
+                    dates = f"{start} - {end}"
+            
             desc = pos.get("description") or ""
             desc = clean_markdown_text(str(desc))
 
-            header_parts = [str(title)]
-            if company:
-                header_parts.append(f"en {company}")
-            header = " - ".join(header_parts)
-            if start:
-                header += f" ({start} - {end})"
-
-            lines.append(f"- **{header}**")
+            # Format: ### Title
+            lines.append(f"### {title}")
+            # Format: **Company** | dates
+            if company and dates:
+                lines.append(f"**{company}** | {dates}\n")
+            elif company:
+                lines.append(f"**{company}**\n")
+            elif dates:
+                lines.append(f"{dates}\n")
+            else:
+                lines.append("")
+            
             if desc:
-                lines.append(f"  {desc}")
-        lines.append("")
+                lines.append(desc)
+            lines.append("")
+
+    # Education section
+    if education:
+        lines.append("## Educación:\n")
+        for edu in education:
+            if not isinstance(edu, dict):
+                continue
+            institution = edu.get("title") or edu.get("institution") or edu.get("school") or "Institución"
+            degree = edu.get("subtitle") or edu.get("degree") or edu.get("field") or ""
+            dates = edu.get("meta") or ""
+            desc = edu.get("description") or ""
+            desc = clean_markdown_text(str(desc))
+            
+            # Format: ### Degree
+            if degree:
+                lines.append(f"### {degree}")
+            else:
+                lines.append(f"### {institution}")
+            
+            # Format: **Institution** | dates
+            if degree and institution and dates:
+                lines.append(f"**{institution}** | {dates}\n")
+            elif degree and institution:
+                lines.append(f"**{institution}**\n")
+            elif dates:
+                lines.append(f"{dates}\n")
+            else:
+                lines.append("")
+            
+            if desc:
+                lines.append(desc)
+            lines.append("")
+    
+    # Certifications section
+    if certifications:
+        lines.append("## Certificaciones:\n")
+        lines.append("&nbsp;\n")
+        for cert in certifications:
+            if not isinstance(cert, dict):
+                continue
+            name = cert.get("title") or cert.get("name") or "Certificación"
+            issuer = cert.get("subtitle") or cert.get("issuer") or cert.get("organization") or ""
+            dates = cert.get("meta") or ""
+            
+            # Format: • **Name** - *Issuer* (date)
+            if issuer and dates:
+                lines.append(f"• **{name}** - *{issuer}* ({dates})\n")
+            elif issuer:
+                lines.append(f"• **{name}** - *{issuer}*\n")
+            elif dates:
+                lines.append(f"• **{name}** ({dates})\n")
+            else:
+                lines.append(f"• **{name}**\n")
 
     content = "\n".join(lines).rstrip() + "\n"
     safe_write_text(content, CV_DEST_FILE)

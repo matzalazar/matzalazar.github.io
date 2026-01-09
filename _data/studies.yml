@@ -1,10 +1,5 @@
 coursera:
-- title: Introduction to Graph Theory
-  percent: 53
-- title: Establishing Command-and-Control and Finding Credentials
-  percent: 8
-- title: Introduction to Computers and Operating Systems and Security, offered by
-    Microsoft, COURSE
-  percent: 100
+- title: Combinatorics and Probability
+  percent: 47
 upso:
   en_curso: []
