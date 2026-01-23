@@ -1,0 +1,51 @@
+/**
+ * Cyborg theme - Modern refined terminal aesthetic
+ * Inspired by contemporary terminal emulators
+ */
+
+@mixin theme() {
+  :root {
+    /* Primary colors - Cyberpunk Refined palette */
+    --base-color: #39bae6;              /* Cyan blue for primary accents */
+    --background-color: #0a0e14;        /* Deep charcoal gray */
+    --text-color: #b3b1ad;              /* Soft gray for main text */
+    
+    /* Accent colors */
+    --accent-orange: #ffb454;           /* Warm orange for highlights */
+    --accent-purple: #c792ea;           /* Soft purple for special elements */
+    --accent-green: #95e6cb;            /* Mint green for success states */
+    
+    /* UI elements */
+    --border-color: #4d5566;            /* Medium gray for borders */
+    --border: solid 1px rgba(77, 85, 102, 0.4);
+    --selection-background: rgba(57, 186, 230, 0.3);
+    --selection-text: #ffffff;
+    --placeholder-color: rgba(179, 177, 173, 0.6);
+    --link-color: var(--base-color);
+    
+    /* Glow effects */
+    --glow-primary: 0 0 10px rgba(57, 186, 230, 0.3);
+    --glow-hover: 0 0 15px rgba(57, 186, 230, 0.5);
+    --glow-orange: 0 0 10px rgba(255, 180, 84, 0.3);
+    
+    /* Code syntax highlighting - refined palette */
+    --code-color-1: #5c6773;            /* Comments - muted gray */
+    --code-color-2: #ffb454;            /* Keywords - orange */
+    --code-color-3: #f07178;            /* Errors - red */
+    --code-color-4: rgba(240, 113, 120, 0.2); /* Error background */
+    --code-color-5: #c792ea;            /* Keywords - purple */
+    --code-color-6: #95e6cb;            /* Strings - mint */
+    --code-color-7: #ffb454;            /* Operators - orange */
+    --code-color-8: #ffb454;            /* Constants - orange */
+    --code-color-9: #95e6cb;            /* Functions - mint */
+    --code-color-10: #5c6773;           /* Comments alt */
+    --code-color-11: #4d5566;           /* Subtle elements */
+    --code-color-12: #c792ea;           /* Special - purple */
+    --code-color-13: #39bae6;           /* Types - cyan */
+    --code-color-14: #f29e74;           /* Numbers - soft orange */
+    --code-color-15: #95e6cb;           /* Strings alt - mint */
+    --code-color-16: #39bae6;           /* Attributes - cyan */
+    --code-color-17: #f07178;           /* Errors alt - red */
+    --code-color-18: #b3b1ad;           /* Default code text */
+  }
+}

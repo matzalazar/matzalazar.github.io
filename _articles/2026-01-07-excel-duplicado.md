@@ -2,6 +2,7 @@
 layout: post
 title: "Cuando los tests pasan, y el bug vive igual"
 date: 2026-01-07
+category: arquitectura
 ---
 
 El Excel de Rendición exportaba perfecto.  

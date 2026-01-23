@@ -2,6 +2,7 @@
 layout: post
 title: "Ingeniería para la vida diaria"
 date: 2025-12-03
+category: datos
 ---
 
 # Ingeniería para la vida diaria  

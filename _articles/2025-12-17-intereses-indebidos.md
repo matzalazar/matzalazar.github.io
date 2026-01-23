@@ -2,6 +2,7 @@
 layout: post
 title: "Intereses Indebidos"
 date: 2025-12-17
+category: arquitectura
 ---
 
 # Cuando un pago “en término” termina generando intereses

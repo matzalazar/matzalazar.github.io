@@ -4,58 +4,62 @@ layout: page
 permalink: /about
 ---
 
-# About
+## // about
 
-Desarrollador de software orientado al backend y la automatización de procesos.
+Desarrollador de software con foco en **backend** y **automatización**.
 
-Trabajo principalmente con Python en el diseño de soluciones eficientes, seguras y escalables, integrando herramientas de datos y flujos automatizados en entornos Linux.
+---
 
-## Experiencia Laboral:
+## // contacto
 
-### Desarrollador de software
-**Autónomo** | mar. 2020 - actualidad · 5 años 11 meses
+**Email:** [matias.zalazar@icloud.com](mailto:matias.zalazar@icloud.com)  
+**LinkedIn:** [linkedin.com/in/matzalazar](https://www.linkedin.com/in/matzalazar/)  
+**GitHub:** [github.com/matzalazar](https://github.com/matzalazar)  
 
-En remoto
-Diseño e implementación de aplicaciones web con énfasis en desarrollo backend y optimización de procesos.
+---
 
-Experiencia en proyectos integrales, abarcando desde la lógica del servidor hasta la interfaz de usuario.
+## // experiencia
 
-### Administrativo
-**Ministerio de Seguridad de la Provincia de Buenos Aires** | sept. 2011 - actualidad · 14 años 5 meses
+**Desarrollador de software** · Autónomo  
+*2020 - presente*
 
-Gestión administrativa y judicial, con experiencia en tramitaciones, control documental y coordinación interinstitucional.
+Diseño e implementación de aplicaciones web, sistemas de automatización y procesamiento de datos.  
+Arquitectura de soluciones full-stack con énfasis en backend resiliente y escalable.
 
-Aplico herramientas informáticas y automatización de procesos para optimizar la gestión y garantizar precisión, trazabilidad y confidencialidad en el manejo de información sensible.
+**Administrativo** · Ministerio de Seguridad de la Provincia de Buenos Aires  
+*2011 - presente*
 
-## Educación:
+Gestión administrativa y judicial con automatización de flujos de trabajo.  
+Aplicación de herramientas informáticas para optimización de procesos y trazabilidad.
 
-### Tecnicatura en Tecnologías de Programación
-**Universidad Provincial del Sudoeste** | mar. 2025
+---
 
-Formación universitaria orientada al desarrollo de software, con énfasis en programación estructurada y orientada a objetos, bases de datos, sistemas operativos y redes.
+## // educación
 
-## Certificaciones:
+**Tecnicatura en Tecnologías de Programación**  
+Universidad Provincial del Sudoeste · *2025*
 
-&nbsp;
+Desarrollo de software, bases de datos, sistemas operativos y redes.
 
-• **Advanced Python Scripting for Cybersecurity** - *Infosec* (Expedición: ene. 2026)
+---
 
-• **Python for Cybersecurity** - *Infosec* (Expedición: dic. 2025)
+## // certificaciones
 
-• **Google Cybersecurity** - *Google* (Expedición: oct. 2025)
+**Ciberseguridad:**
+- Advanced Python Scripting for Cybersecurity (Especialización) · *Infosec (2026)*
+- Python for Cybersecurity (Especialización) · *Infosec (2025)*
+- Google Cybersecurity (Certificado Profesional) · *Google (2025)*
+- Social Engineering Expert · *Packt (2025)*
 
-• **Introduction to Calculus** - *The University of Sydney Business School* (Expedición: oct. 2025)
+**Data & Machine Learning:**
+- Data Engineering · *UTN FRBA (2025)*
+- Machine Learning con Python · *UTN FRBA (2025)*
+- Redes Neuronales · *UTN FRBA (2025)*
+- Minería de Datos con Python · *UTN FRBA (2025)*
 
-• **Social Engineering Expert** - *Packt* (Expedición: oct. 2025)
+**Fundamentos:**
+- Google IT Support (Certificado Profesional) · *Google (2025)*
 
-• **Matrix Algebra for Engineers** - *The Hong Kong University of Science and Technology* (Expedición: ago. 2025)
-
-• **Google IT Support** - *Google* (Expedición: jul. 2025)
-
-• **Machine Learning con Python** - *Centro de e-Learning UTN FRBA* (Expedición: jul. 2025)
-
-• **Data Engineering** - *Centro de e-Learning UTN FRBA* (Expedición: abr. 2025)
-
-• **Curso de Minería de Datos con Python** - *Centro de e-Learning UTN FRBA* (Expedición: feb. 2025)
-
-• **Curso de Redes Neuronales** - *Centro de e-Learning UTN FRBA* (Expedición: ene. 2025)
+**Matemática:**
+- Introduction to Calculus · *The University of Sydney (2025)*
+- Matrix Algebra for Engineers · *HKUST (2025)*
