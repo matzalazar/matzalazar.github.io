@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "Por qué tu contraseña del WiFi basada en tu DNI es vulnerable"
+title: "Por qué tu contraseña es vulnerable"
 date: 2025-07-28
+category: ciberseguridad
 ---
 
-# Por qué tu contraseña del WiFi basada en tu DNI es vulnerable
+# Por qué tu contraseña es vulnerable
 
 ## Introducción
 

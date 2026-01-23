@@ -1,5 +1,50 @@
 /* ========================================================================= */
-/* ESTILOS DE PORTADA                             */
+/* CYBORG THEME - ENHANCED OVERRIDES                                        */
+/* ========================================================================= */
+
+/* ========================================================================= */
+/* ANIMACIONES Y EFECTOS VISUALES                                            */
+/* ========================================================================= */
+
+/* Cursor parpadeante animado */
+@keyframes blink {
+
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink {
+  display: inline-block;
+  width: 10px;
+  height: 1.2em;
+  background-color: var(--base-color);
+  margin-left: 4px;
+  animation: blink 1s step-end infinite;
+  vertical-align: text-bottom;
+}
+
+/* Respeta preferencias de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  .cursor-blink {
+    animation: none;
+    opacity: 0.7;
+  }
+
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* ========================================================================= */
+/* ESTILOS DE PORTADA                                                        */
 /* ========================================================================= */
 
 /* Reduce el espacio debajo del H1 en la home */
@@ -9,37 +54,45 @@ body .container main h1 {
 
 /* Ajusta el interlineado y el margen vertical de párrafos en la home (GENERAL) */
 body .container main p {
-  line-height: 1.35; 
+  line-height: 1.35;
   margin: 0.35rem 0;
 }
 
 /* Asegura que el primer párrafo esté aún más pegado al título H1 */
-body .container main h1 + p {
+body .container main h1+p {
   margin-top: 0.25rem;
 }
 
-/* Marco minimalista para el bloque dinámico (box.html) */
-/* Marco minimalista para el bloque dinámico (box.html) */
+/* Marco minimalista mejorado para boxes */
 .box {
-  border: 1px dashed var(--base-color);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 0.75rem 0.75rem;
   margin: 1rem 0;
+  background: linear-gradient(135deg, rgba(57, 186, 230, 0.03) 0%, rgba(199, 146, 234, 0.03) 100%);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.box:hover {
+  border-color: var(--base-color);
+  box-shadow: var(--glow-primary);
+  transform: translateY(-2px);
 }
 
 /* Aumenta el margen superior del primer box que sigue a un párrafo */
-body .container main p + .box {
-    margin-top: 2.5rem; /* Aumenta este valor (e.g., 2rem, 2.5rem, 3rem) para crear una clara separación */
+body .container main p+.box {
+  margin-top: 2.5rem;
 }
 
 /* ========================================================================= */
-/* ESTILOS DE BLOQUES DINÁMICOS                      */
+/* ESTILOS DE BLOQUES DINÁMICOS                                             */
 /* ========================================================================= */
 
 /* Aplicamos compacidad a las listas dentro de todas las secciones dinámicas */
 #ahora-leyendo ul,
 #estudios ul,
-#github ul { /* Asumiendo que GitHub también usará <ul> */
+#github ul {
   margin: 1rem 0 0 1.1rem;
   padding: 0;
 }
@@ -51,84 +104,79 @@ body .container main p + .box {
   margin: 0.2rem 0;
 }
 
-/* --- Corrección de Especificidad para el Pie de Box (Historial Link) --- */
-
-/* Usamos más selectores para asegurar que esta regla sobrescriba la regla general de <p> */
+/* Pie de Box con enlace */
 .box p.box-link-footer {
   text-align: right;
-  margin-top: 2.5rem !important; /* Usamos !important por si acaso, aunque la especificidad debería bastar. Puedes probar sin él primero. */
-  margin-bottom: 0 !important; /* Eliminamos el margen inferior de la p */
-  font-size: 0.85em; 
+  margin-top: 2.5rem !important;
+  margin-bottom: 0 !important;
+  font-size: 0.85em;
 }
 
-/* Estilo sutil para el enlace */
 .box p.box-link-footer a {
-  text-decoration: none; 
-  /* color: var(--highlight-color);  Puedes añadir un color de acento si usas variables */
+  text-decoration: none;
+  color: var(--accent-orange);
+  transition: all 0.2s ease;
+}
+
+.box p.box-link-footer a:hover {
+  color: var(--base-color);
+  box-shadow: none;
+  background: transparent;
 }
 
 /* ========================================================================= */
-/* ESTILOS DEL BLOG                             */
+/* ESTILOS DEL BLOG                                                          */
 /* ========================================================================= */
 
 .log-note {
-    /* Define un espacio sutil debajo de cada nota (margen como separador) */
-    margin-bottom: 30px; 
-    /* padding-bottom: 10px;  Mantengo esta línea comentada como opción */
+  margin-bottom: 30px;
 }
 
-/* Asegura que la última nota de la lista no tenga margen extra */
 .log-container .log-note:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-/* --- Override para BLOQUES DE CÓDIGO --- */
+/* ========================================================================= */
+/* BLOQUES DE CÓDIGO - Override                                              */
+/* ========================================================================= */
 
-/* --- ARREGLO DOBLE RECUADRO CÓDIGO JEKYLL --- */
-
-/* 1. Anula el <div> exterior para hacerlo invisible */
+/* Anula el div exterior para hacerlo invisible */
 div.highlight {
   background: none !important;
   border: none !important;
   padding: 0 !important;
-  /* El margen lo manejará el <pre> de adentro */
-  margin: 0 !important; 
+  margin: 0 !important;
 }
 
-/* 2. Estiliza el <pre> interior (esta es tu caja principal) */
-/* Aquí aplicamos tus estilos Y los de rougify */
+/* Estiliza el pre interior con efectos modernos */
 div.highlight pre.highlight {
-  /* Tus estilos de caja */
-  border: 1px solid #444;
-  border-radius: 8px;        /* Tus bordes redondeados */
-
-  /* El espaciado y márgenes correctos */
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-  padding: 1rem;             /* El padding interno */
-
-  /* El scroll */
+  padding: 1rem;
   overflow-x: auto;
-
-  /* NOTA: El 'background' y 'color' del código */
-  /* los tomará del CSS de rougify que ya tienes. */
+  box-shadow: var(--glow-primary);
+  transition: all 0.3s ease;
 }
 
-/* 3. Anula el <code> (por si acaso) */
-/* Nos aseguramos de que no tenga fondo ni borde propio */
+div.highlight pre.highlight:hover {
+  border-color: var(--base-color);
+  box-shadow: var(--glow-hover);
+}
+
+/* Anula el code por si acaso */
 div.highlight pre.highlight code {
   background: none !important;
   border: none !important;
   padding: 0 !important;
   margin: 0 !important;
-
-  /* Estilos de fuente */
   font-size: 0.9em;
   line-height: 1.4;
 }
 
 /* ========================================================================= */
-/* NAV BAR (centrado brand + links) */
+/* NAV BAR (centrado brand + links)                                          */
 /* ========================================================================= */
 
 .menu {
@@ -141,6 +189,7 @@ div.highlight pre.highlight code {
 .menu .brand {
   margin: 0;
   text-transform: lowercase;
+  letter-spacing: 0.05em;
 }
 
 .menu .menu-links {
@@ -151,8 +200,12 @@ div.highlight pre.highlight code {
   gap: 15px;
 }
 
+.menu ul li a:hover {
+  box-shadow: var(--glow-hover);
+}
+
 /* ========================================================================= */
-/* ABOUT / CV: Botón de impresión mínima */
+/* ABOUT / CV: Botón de impresión                                            */
 /* ========================================================================= */
 .print-controls {
   margin: 0 0 1rem 0;
@@ -160,16 +213,19 @@ div.highlight pre.highlight code {
 
 .print-btn {
   background: transparent;
-  border: 1px dashed var(--base-color);
+  border: 1px solid var(--border-color);
   color: var(--text-color);
   padding: 6px 12px;
   border-radius: 6px;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .print-btn:hover {
   background: var(--base-color);
   color: var(--background-color);
+  box-shadow: var(--glow-hover);
+  transform: translateY(-1px);
 }
 
 @media print {
@@ -199,12 +255,13 @@ body .container main img {
   height: auto;
   display: block;
   margin: 1.5rem auto;
+  border-radius: 8px;
+  box-shadow: var(--glow-primary);
 }
 
-/* En pantallas grandes, que no ocupen todo el ancho */
 @media (min-width: 900px) {
   body .container main img {
-    max-width: 720px; /* ajustá a gusto: 600-900 suele andar bien */
+    max-width: 720px;
   }
 }
 
@@ -212,60 +269,46 @@ body .container main img {
 /* LATEX (MathJax)                                                           */
 /* ========================================================================= */
 
-/* ----------------------------- */
 /* MathJax v3: Centrado Vertical + Fila Rígida */
-/* ----------------------------- */
-
 mjx-container[display="true"] {
-  /* 1. Comportamiento Flex para centrado perfecto */
   display: flex !important;
-  flex-direction: row !important; /* Siempre fila, nunca columna */
-  flex-wrap: nowrap !important;   /* PROHIBIDO envolver si sobra espacio */
-  
-  /* 2. Alineación geométrica */
-  justify-content: center; 
-  align-items: center;     
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
 
-  /* 3. Caja y Bordes */
+  justify-content: center;
+  align-items: center;
+
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid #444;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
-  
-  /* 4. Padding simétrico */
-  padding: 1rem 0.5rem; 
+
+  padding: 1rem 0.5rem;
   margin: 0.85rem 0 !important;
 
-  /* 5. Scroll horizontal SOLO si es verdaderamente necesario */
   overflow-x: auto;
   overflow-y: hidden;
-  
-  /* 6. Prohibido romper líneas dentro del contenedor */
-  white-space: nowrap !important; 
+
+  white-space: nowrap !important;
+  box-shadow: var(--glow-primary);
 }
 
-/* Reglas para el contenido matemático interno */
 mjx-container[display="true"] mjx-math {
   margin: 0 !important;
   padding: 0 !important;
-  
-  /* Fuerza bruta para que sea un bloque sólido */
-  white-space: nowrap !important; 
+  white-space: nowrap !important;
   width: auto !important;
-  flex-shrink: 0 !important; /* No permitimos que se encoja */
+  flex-shrink: 0 !important;
 }
 
-/* ----------------------------- */
-/* MathJax v2: display math       */
-/* ----------------------------- */
-
+/* MathJax v2: display math */
 .MathJax_Display {
   display: block !important;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
 
-  border: 1px solid #444;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
 
   margin: 1.5rem 0 !important;
@@ -276,10 +319,208 @@ mjx-container[display="true"] mjx-math {
   -webkit-overflow-scrolling: touch;
 
   text-align: center;
+  box-shadow: var(--glow-primary);
 }
 
-/* No-wrap solo al contenido v2 */
-.MathJax_Display > * {
+.MathJax_Display>* {
   display: inline-block;
   white-space: nowrap;
+}
+
+/* ========================================================================= */
+/* ARTICLES - Category System                                                */
+/* ========================================================================= */
+
+.articles-container {
+  margin-top: 2rem;
+}
+
+/* Category Filter Navigation */
+.category-filter {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+  flex-wrap: nowrap;
+  font-size: 0.9em;
+}
+
+.filter-label {
+  color: var(--accent-orange);
+  font-weight: bold;
+  margin-right: 3px;
+}
+
+.category-link {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 3px 6px;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.category-link:hover,
+.category-link.active {
+  background-color: var(--base-color);
+  color: var(--background-color);
+  box-shadow: var(--glow-hover);
+}
+
+.category-filter .separator {
+  color: var(--border-color);
+  user-select: none;
+  font-size: 0.85em;
+}
+
+/* Category Sections */
+.category-section {
+  margin-bottom: 3rem;
+}
+
+.category-title {
+  color: var(--base-color);
+  font-size: 13.5px;
+  margin-bottom: 1rem;
+  text-transform: lowercase;
+  font-weight: bold;
+}
+
+/* Articles List */
+.articles-list {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.article-item {
+  margin: 0.5rem 0;
+  display: flex;
+  gap: 15px;
+  align-items: baseline;
+  flex-wrap: nowrap;
+}
+
+.article-item::before {
+  content: "-";
+  margin-right: 0;
+  color: var(--text-color);
+  flex-shrink: 0;
+}
+
+.article-date {
+  color: var(--accent-orange);
+  font-size: 0.9em;
+  min-width: 90px;
+  flex-shrink: 0;
+}
+
+.article-item a {
+  font-size: 0.95em;
+}
+
+.article-tags {
+  color: var(--accent-purple);
+  font-size: 0.85em;
+  margin-left: auto;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .category-filter {
+    gap: 6px;
+  }
+
+  .category-link {
+    padding: 3px 8px;
+    font-size: 0.9em;
+  }
+
+  .article-item {
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+  }
+
+  .article-date {
+    font-size: 0.85em;
+  }
+
+  .article-tags {
+    margin-left: 0;
+  }
+}
+
+/* ========================================================================= */
+/* ABOUT PAGE - Improved spacing and readability                             */
+/* ========================================================================= */
+
+/* About page specific improvements */
+body .container main h1+p,
+body .container main p {
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+/* Section headers with comment style */
+body .container main h2 {
+  color: var(--base-color);
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+/* Extra spacing when h3 is followed by list */
+body .container main h3 {
+  margin-bottom: 0.8rem;
+}
+
+body .container main h3+p,
+body .container main h3+ul {
+  margin-top: 0.8rem;
+}
+
+/* Improve list spacing in about */
+body .container main ul {
+  margin: 1.5rem 0;
+  line-height: 1.9;
+}
+
+body .container main ul li {
+  margin: 0.7rem 0;
+}
+
+/* Horizontal rules */
+body .container main hr {
+  border: none;
+  border-top: 1px dashed var(--border-color);
+  margin: 3rem 0;
+  opacity: 0.6;
+}
+
+/* Links in about */
+body .container main a {
+  color: var(--base-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+body .container main a:hover {
+  text-decoration: underline;
+  box-shadow: none;
+}
+
+/* Stronger emphasis */
+body .container main strong {
+  color: var(--accent-orange);
+  font-weight: normal;
+}
+
+/* Italic text */
+body .container main em {
+  color: var(--accent-purple);
+  font-style: normal;
 }
