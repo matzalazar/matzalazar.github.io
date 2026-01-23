@@ -524,3 +524,66 @@ body .container main em {
   color: var(--accent-purple);
   font-style: normal;
 }
+
+/* ========================================================================= */
+/* SERIES - Article Series Navigation                                        */
+/* ========================================================================= */
+
+/* Series badge in article list */
+.series-badge {
+  color: var(--accent-purple);
+  font-size: 0.85em;
+  font-weight: bold;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Series navigation box in article (más compacto) */
+.series-nav {
+  border-left: 3px solid var(--base-color);
+  padding: 0.8rem 1rem;
+  margin: 1.5rem 0;
+  background: rgba(57, 186, 230, 0.05);
+  border-radius: 4px;
+}
+
+.series-nav p {
+  margin-bottom: 0.5rem;
+  color: var(--base-color);
+}
+
+.series-nav ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0.3rem 0 0 0;
+}
+
+.series-nav li {
+  margin: 0.3rem 0;
+}
+
+.series-nav strong {
+  color: var(--accent-orange);
+}
+
+/* Series group styling */
+.series-section {
+  display: none;
+}
+
+.series-group {
+  margin-bottom: 2rem;
+}
+
+.series-name {
+  color: var(--accent-purple);
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  margin-top: 0;
+}
+
+.series-group .articles-list {
+  border-left: 2px solid var(--accent-purple);
+  padding-left: 1rem;
+}

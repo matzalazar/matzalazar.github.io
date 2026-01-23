@@ -2,11 +2,11 @@
 layout: default
 ---
 
-{% assign contentwonl = content | strip_newlines %} 
-{% unless contentwonl == ""  %} <br /> {% endunless %} 
+{% assign contentwonl = content | strip_newlines %}
+{% unless contentwonl == "" %} <br /> {% endunless %}
 
 <div class="articles-container">
-  
+
   <!-- Navegación de categorías -->
   <nav class="category-filter">
     <span class="filter-label">$</span>
@@ -19,36 +19,57 @@ layout: default
     <a href="#" class="category-link" data-category="automatizacion">automatización</a>
     <span class="separator">|</span>
     <a href="#" class="category-link" data-category="ciberseguridad">ciberseguridad</a>
+    <span class="separator">|</span>
+    <a href="#" class="category-link" data-category="series">series</a>
   </nav>
 
   {%- if site.articles.size > 0 -%}
-    {% assign sorted_articles = site.articles | sort: "date" | reverse %}
-    {% assign categories = "arquitectura,datos,automatizacion,ciberseguridad" | split: "," %}
-    
-    {% for category in categories %}
-      {% assign cat_articles = sorted_articles | where: "category", category %}
-      {% if cat_articles.size > 0 %}
-        <section class="category-section" data-category="{{ category }}">
-          <h2 class="category-title">// {{ category }}</h2>
-          
-          <ul class="articles-list">
-            {% for article in cat_articles %}
-              <li class="article-item">
-                <span class="article-date">{{ article.date | date: "%Y-%m-%d" }}</span>
-                <a href="{{ article.url | relative_url }}">{{ article.title | escape }}</a>
-                {% if article.tags %}
-                  <span class="article-tags">
-                    {% for tag in article.tags %}#{{ tag }}{% unless forloop.last %} {% endunless %}{% endfor %}
-                  </span>
-                {% endif %}
-              </li>
-            {% endfor %}
-          </ul>
-        </section>
-      {% endif %}
+  {% assign sorted_articles = site.articles | sort: "date" | reverse %}
+
+  <!-- Sección SERIES (vista especial agrupada) -->
+  <section class="category-section series-section" data-category="series">
+    <h2 class="category-title">// series</h2>
+
+    {% assign series_articles = sorted_articles | where_exp: "item", "item.series != nil" | group_by: "series" %}
+    {% for series_group in series_articles %}
+    <div class="series-group">
+      <h3 class="series-name">{{ series_group.name }}</h3>
+      <ul class="articles-list">
+        {% assign series_sorted = series_group.items | sort: "series_part" %}
+        {% for article in series_sorted %}
+        <li class="article-item">
+          <span class="article-date">{{ article.date | date: "%Y-%m-%d" }}</span>
+          <span class="series-badge">[{{ article.series_part }}/{{ article.series_total }}]</span>
+          <a href="{{ article.url | relative_url }}">{{ article.title | escape }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
     {% endfor %}
+  </section>
+
+  <!-- Secciones por categoría (se muestran en "todas" y en cada categoría individual) -->
+  {% assign categories = "arquitectura,datos,automatizacion,ciberseguridad" | split: "," %}
+
+  {% for category in categories %}
+  {% assign cat_articles = sorted_articles | where: "category", category %}
+  {% if cat_articles.size > 0 %}
+  <section class="category-section" data-category="{{ category }}">
+    <h2 class="category-title">// {{ category }}</h2>
+
+    <ul class="articles-list">
+      {% for article in cat_articles %}
+      <li class="article-item">
+        <span class="article-date">{{ article.date | date: "%Y-%m-%d" }}</span>
+        <a href="{{ article.url | relative_url }}">{{ article.title | escape }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+  {% endfor %}
   {%- endif -%}
-  
+
 </div>
 
 <script src="{{ '/assets/category-filter.js' | relative_url }}"></script>
