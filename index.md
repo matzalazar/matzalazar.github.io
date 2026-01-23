@@ -6,11 +6,16 @@ permalink: /
 
 Hola.
 
-Soy Matías y vivo en Bahía Blanca, Argentina.
+Soy Matías, desarrollador de software en Bahía Blanca, Argentina.
 
-**Ciberseguridad**, **automatización** y **ciencia de datos**.  
+**Construyo sistemas que simplifican lo complejo** mediante automatización, diseño de datos y ciberseguridad proactiva.
 
 Con **Python**, para hacer más con menos.
+
+---
+
+{% assign latest = site.articles | sort: "date" | reverse | first %}
+mi último artículo → [{{ latest.title }}]({{ latest.url }})
 
 ---
 

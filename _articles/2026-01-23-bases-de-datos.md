@@ -3,6 +3,9 @@ layout: post
 title: "Diseñar la base de datos antes que la aplicación"
 date: 2026-01-23
 category: arquitectura
+series: "Diseño evolutivo de sistemas"
+series_part: 1
+series_total: 3
 ---
 
 # Diseñar la base de datos antes que la aplicación  

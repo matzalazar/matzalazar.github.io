@@ -2,4 +2,25 @@
 layout: default
 ---
 
+{% if page.series %}
+<div class="series-nav">
+  <p><strong>Serie:</strong> {{ page.series }} (Parte {{ page.series_part }} de {{ page.series_total }})</p>
+  
+  {% assign series_articles = site.articles | where: "series", page.series | sort: "series_part" %}
+  {% if series_articles.size > 1 %}
+    <ul>
+      {% for article in series_articles %}
+        <li>
+          {% if article.url == page.url %}
+            <strong>→ {{ article.title }}</strong> (estás aquí)
+          {% else %}
+            <a href="{{ article.url }}">{{ article.title }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>
+{% endif %}
+
 {{ content }}

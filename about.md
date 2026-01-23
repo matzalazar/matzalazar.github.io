@@ -6,7 +6,12 @@ permalink: /about
 
 ## // about
 
-Desarrollador de software con foco en **backend** y **automatización**.
+Desarrollador backend. Especializado en **automatización** y **diseño de sistemas evolutivos**.
+
+Mi enfoque consiste en **aplicar ingeniería de software a problemas operativos reales**, con énfasis en:
+- Modelado de dominio que capture invariantes antes de escribir código
+- Automatización que elimine fricción sin romper cuando algo falla
+- Sistemas que evolucionen basándose en feedback real
 
 ---
 
