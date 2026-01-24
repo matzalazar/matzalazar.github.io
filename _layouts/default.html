@@ -2,7 +2,7 @@
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 {%- capture csp -%}
 default-src 'none';
-connect-src 'self';
+connect-src 'self' https://*.goatcounter.com;
 base-uri 'self';
 form-action 'none';
 img-src 'self' https: data:;
@@ -11,7 +11,7 @@ font-src 'self' https://fonts.gstatic.com data:;
 media-src 'self';
 object-src 'none';
 child-src 'self';
-script-src 'self' https://cdn.jsdelivr.net 'unsafe-inline';
+script-src 'self' https://cdn.jsdelivr.net https://gc.zgo.at 'unsafe-inline';
 {%- endcapture -%}
 <meta http-equiv="Content-Security-Policy" content="{{ csp | strip }}" />
 <meta http-equiv="X-XSS-Protection" content="1;mode=block" always>

@@ -13,6 +13,9 @@ footer: 'Podés escribirme un <a href="mailto:matias.zalazar@icloud.com">mail</a
 # Nuevo tema: cyborg (terminal moderno refinado)
 style: cyborg
 
+# Analytics
+goatcounter: matzalazar
+
 collections:
   articles:
     output: true 
