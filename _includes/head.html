@@ -11,12 +11,12 @@
   {% endif %}
 
   {%- unless site.disable_google_fonts -%}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet">
   {%- endunless -%}
 
-  <link rel="stylesheet" type="text/css" href="{{ "/assets/main-cyborg.css" | relative_url }}">
+  <link rel="stylesheet" type="text/css" href="{{ " /assets/main-cyborg.css" | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/overrides.css' | relative_url }}">
 
   <!-- Configuración de MathJax -->
@@ -33,8 +33,12 @@
   </script>
 
   <!-- Carga de MathJax desde CDN -->
-  <script id="MathJax-script" async
-          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
+
+  {% if site.goatcounter %}
+  <script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async
+    src="//gc.zgo.at/count.js"></script>
+  {% endif %}
 
 </head>
