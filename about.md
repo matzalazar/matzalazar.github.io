@@ -66,5 +66,6 @@ Desarrollo de software, bases de datos, sistemas operativos y redes.
 - Google IT Support (Certificado Profesional) · *Google (2025)*
 
 **Matemática:**
+- Introduction to Discrete Mathematics for Computer Science (Especialización) · *UC San Diego (2026)*
 - Introduction to Calculus · *The University of Sydney (2025)*
 - Matrix Algebra for Engineers · *HKUST (2025)*
