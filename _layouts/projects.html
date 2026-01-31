@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<div class="projects-container">
+  <h1>Projects</h1>
+
+  {% assign sorted_projects = site.projects | sort: "date" | reverse %}
+
+  <ul class="projects-list">
+    {% for project in sorted_projects %}
+    <li class="project-item">
+      <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+      {% if project.description %}<p>{{ project.description }}</p>{% endif %}
+
+      {% assign project_articles = site.articles | where: "project", project.title | sort: "project_part" %}
+      {% if project_articles.size > 0 %}
+      <ul class="project-articles">
+        {% for article in project_articles %}
+        <li><a href="{{ article.url | relative_url }}">{{ article.title }}</a></li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>

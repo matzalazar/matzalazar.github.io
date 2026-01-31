@@ -2,10 +2,12 @@
 title: Matías Zalazar
 url: "https://matzalazar.com"
 baseurl: ""
+lang: es
 
 header_pages:
   - index.md
   - articles.md
+  - projects.md
   - about.md
 
 footer: 'Podés escribirme un <a href="mailto:matias.zalazar@icloud.com">mail</a> o conectarme en <a href="https://www.linkedin.com/in/matzalazar/">linkedin</a>'
@@ -20,6 +22,16 @@ collections:
   articles:
     output: true 
     permalink: /article/:name/
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project
 
 kramdown:
   input: GFM
@@ -27,4 +39,4 @@ kramdown:
 
 plugins:
   - jekyll-seo-tag
-  - jekyll-paginate
+  - jekyll-sitemap

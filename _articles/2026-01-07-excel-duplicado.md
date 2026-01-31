@@ -3,6 +3,7 @@ layout: post
 title: "Cuando los tests pasan, y el bug vive igual"
 date: 2026-01-07
 category: arquitectura
+description: "Bug silencioso en exportación Excel: cómo un flag de vista invisible causaba duplicación de datos"
 ---
 
 El Excel de Rendición exportaba perfecto.  

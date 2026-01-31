@@ -19,6 +19,7 @@
   <link rel="stylesheet" type="text/css" href="{{ '/assets/main-cyborg.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/overrides.css' | relative_url }}">
 
+  {% if page.math %}
   <!-- Configuración de MathJax -->
   <script>
     window.MathJax = {
@@ -35,6 +36,7 @@
   <!-- Carga de MathJax desde CDN -->
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
+  {% endif %}
 
   {% if site.goatcounter %}
   <script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async

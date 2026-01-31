@@ -2,6 +2,27 @@
 layout: default
 ---
 
+{% if page.project %}
+<div class="project-nav">
+  <p><strong>Proyecto:</strong> {{ page.project }} {% if page.project_part %}(Parte {{ page.project_part }} de {{ page.project_total }}){% endif %}</p>
+  
+  {% assign project_articles = site.articles | where: "project", page.project | sort: "project_part" %}
+  {% if project_articles.size > 1 %}
+    <ul>
+      {% for article in project_articles %}
+        <li>
+          {% if article.url == page.url %}
+            <strong>→ {{ article.title }}</strong> (estás aquí)
+          {% else %}
+            <a href="{{ article.url }}">{{ article.title }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>
+{% endif %}
+
 {% if page.series %}
 <div class="series-nav">
   <p><strong>Serie:</strong> {{ page.series }} (Parte {{ page.series_part }} de {{ page.series_total }})</p>

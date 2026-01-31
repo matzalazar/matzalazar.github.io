@@ -3,6 +3,7 @@ layout: post
 title: "Reducir fricción en entornos de trabajo distribuidos"
 date: 2025-12-23
 category: automatizacion
+description: "Automatización de flujos de trabajo mediante scripts Bash: detección de conectividad, syncing y backups"
 ---
 
 Trabajo con Linux. Pero también trabajo en más de un lugar.

@@ -1,8 +1,10 @@
+```
 ---
 layout: post
-title: "Por qué tu contraseña es vulnerable"
+title: "Vulnerabilidades WiFi en Argentina"
 date: 2025-07-28
 category: ciberseguridad
+description: "Análisis de seguridad WiFi en redes argentinas: WPS, handshakes y buenas prácticas de configuración"
 ---
 
 # Por qué tu contraseña es vulnerable

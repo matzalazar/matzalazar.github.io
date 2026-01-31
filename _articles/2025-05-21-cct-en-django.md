@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Cómo gestionar Convenios Colectivos de Trabajo en Django"
+title: "CCT en Django"
 date: 2025-05-21
 category: arquitectura
+description: "Implementación de validación temporal estricta en Django usando constraints para evitar estados inválidos"
 ---
 
 ## Cómo gestionar Convenios Colectivos de Trabajo en Django

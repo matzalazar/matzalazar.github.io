@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Moodle Downloader: una solución headless con Selenium"
+title: "Moodle en la UPSO"
 date: 2025-05-14
 category: automatizacion
+description: "Script Python para automatizar descarga de materiales de Moodle mediante Selenium y requests"
 ---
 
 ## Moodle Downloader: una solución headless con Selenium para entornos educativos

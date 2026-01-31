@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Ingeniería para la vida diaria"
+title: "SQL de mi vida"
 date: 2025-12-03
 category: datos
+description: "Sistema de RPA personal para capturar, versionar y centralizar datos de GitHub, Moodle, Coursera y lecturas"
 ---
 
 # Ingeniería para la vida diaria  

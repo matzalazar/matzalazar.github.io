@@ -9,8 +9,8 @@ RUN apt-get update && \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-# Copiar Gemfile
-COPY Gemfile* ./
+# Copiar solo Gemfile (evita usar Gemfile.lock viejo del host)
+COPY Gemfile ./
 
 # Instalar gems
 RUN bundle install

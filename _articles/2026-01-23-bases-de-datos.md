@@ -6,6 +6,7 @@ category: arquitectura
 series: "Diseño evolutivo de sistemas"
 series_part: 1
 series_total: 3
+description: "Arquitectura de eventos inmutables: cómo gestionar 1M+ registros en 6 MB sin estados inválidos"
 ---
 
 # Diseñar la base de datos antes que la aplicación  

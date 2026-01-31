@@ -587,3 +587,32 @@ body .container main em {
   border-left: 2px solid var(--accent-purple);
   padding-left: 1rem;
 }
+
+/* Navbar responsive: apila y permite wrap en pantallas pequeñas */
+@media (max-width: 640px) {
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .menu .menu-links {
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 8px;
+  }
+  .menu .menu-links li {
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+/* Project nav (diferente de series) */
+.project-nav {
+  border: 1px solid var(--border-color);
+  padding: 0.6rem;
+  border-radius: 6px;
+  background: rgba(0,0,0,0.03);
+  margin-bottom: 1rem;
+}
+.project-nav p { color: var(--base-color); margin: 0 0 0.5rem 0; }
+.project-nav strong { color: var(--accent-orange); }

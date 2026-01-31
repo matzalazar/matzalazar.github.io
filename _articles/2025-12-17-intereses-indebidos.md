@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "Intereses Indebidos"
+title: "Intereses indebidos"
 date: 2025-12-17
-category: arquitectura
+category: datos
+description: "Análisis de liquidaciones de deuda usando Pandas para detectar errores en cálculo de intereses compensatorios"
 ---
 
 # Cuando un pago “en término” termina generando intereses

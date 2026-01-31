@@ -6,6 +6,7 @@ category: arquitectura
 series: "Diseño evolutivo de sistemas"
 series_part: 2
 series_total: 3
+description: "Cómo el diseño de eventos inmutables permitió evolucionar la UX sin tocar el modelo de dominio"
 ---
 
 # Cuando el modelo resiste  

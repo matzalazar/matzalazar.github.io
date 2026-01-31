@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<article class="project-page">
+  <header>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="project-description">{{ page.description }}</p>{% endif %}
+  </header>
+
+  {% assign project_articles = site.articles | where: "project", page.title | sort: "project_part" %}
+  {% if project_articles.size > 0 %}
+  <div class="project-nav">
+    <p><strong>Proyecto:</strong> {{ page.title }} {% if page.date %} — {{ page.date | date: "%Y" }}{% endif %}</p>
+    <ul>
+      {% for article in project_articles %}
+      <li>
+        {% if article.url == page.url %}
+          <strong>→ {{ article.title }}</strong>
+        {% else %}
+          <a href="{{ article.url | relative_url }}">{{ article.title }}</a>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  <section class="project-content">
+    {{ content }}
+  </section>
+
+  <!-- JSON-LD ItemList for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "{{ page.title | escape }}",
+    "description": "{{ page.description | escape }}",
+    "itemListElement": [
+      {% for article in project_articles %}
+      {
+        "@type": "ListItem",
+        "position": {{ forloop.index }},
+        "url": "{{ site.url }}{{ article.url }}"
+      }{% if forloop.last == false %},{% endif %}
+      {% endfor %}
+    ]
+  }
+  </script>
+</article>
