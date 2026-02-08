@@ -14,7 +14,7 @@ layout: default
           {% if article.url == page.url %}
             <strong>→ {{ article.title }}</strong> (estás aquí)
           {% else %}
-            <a href="{{ article.url }}">{{ article.title }}</a>
+            <a href="{{ article.url | relative_url }}">{{ article.title }}</a>
           {% endif %}
         </li>
       {% endfor %}
@@ -35,7 +35,7 @@ layout: default
           {% if article.url == page.url %}
             <strong>→ {{ article.title }}</strong> (estás aquí)
           {% else %}
-            <a href="{{ article.url }}">{{ article.title }}</a>
+            <a href="{{ article.url | relative_url }}">{{ article.title }}</a>
           {% endif %}
         </li>
       {% endfor %}

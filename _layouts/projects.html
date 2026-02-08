@@ -12,6 +12,7 @@ layout: default
     <li class="project-item">
       <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
       {% if project.description %}<p>{{ project.description }}</p>{% endif %}
+      {% if project.repo %}<p class="project-links"><a href="{{ project.repo }}" rel="noopener noreferrer">repo</a></p>{% endif %}
 
       {% assign project_articles = site.articles | where: "project", project.title | sort: "project_part" %}
       {% if project_articles.size > 0 %}

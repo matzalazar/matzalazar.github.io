@@ -6,6 +6,9 @@ layout: default
   <header>
     <h1>{{ page.title }}</h1>
     {% if page.description %}<p class="project-description">{{ page.description }}</p>{% endif %}
+    {% if page.repo %}
+      <p class="project-links"><a href="{{ page.repo }}" rel="noopener noreferrer">repo</a></p>
+    {% endif %}
   </header>
 
   {% assign project_articles = site.articles | where: "project", page.title | sort: "project_part" %}
