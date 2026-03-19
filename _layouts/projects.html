@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+{% assign contentwonl = content | strip_newlines %}
+{% unless contentwonl == "" %}<br />{% endunless %}
+
+<div class="projects-container">
+
+  {% assign sorted_projects = site.projects | sort: "date" | reverse %}
+
+  <ul class="projects-list">
+    {% for project in sorted_projects %}
+    <li class="project-card">
+
+      <div class="project-card-header">
+        <a href="{{ project.url | relative_url }}" class="project-title-link">{{ project.title }}</a>
+        {% if project.repo %}
+        <a href="{{ project.repo }}" class="project-repo-btn" rel="noopener noreferrer" target="_blank">↗ repo</a>
+        {% endif %}
+      </div>
+
+      {% if project.description %}
+      <p class="project-desc">{{ project.description }}</p>
+      {% endif %}
+
+      {% if project.tags %}
+      <div class="project-tags">
+        {% for tag in project.tags %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      {% assign project_articles = site.articles | where: "project", project.title | sort: "project_part" %}
+      {% if project_articles.size > 0 %}
+      <div class="project-related">
+        <span class="related-label">artículos relacionados</span>
+        <ul>
+          {% for article in project_articles %}
+          <li><a href="{{ article.url | relative_url }}">{{ article.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+    </li>
+    {% endfor %}
+  </ul>
+
+</div>

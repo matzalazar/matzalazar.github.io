@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+{%- capture csp -%}
+default-src 'none';
+connect-src 'self' https://*.goatcounter.com;
+base-uri 'self';
+form-action 'none';
+img-src 'self' https: data:;
+style-src 'self' https://fonts.googleapis.com;
+font-src 'self' https://fonts.gstatic.com data:;
+media-src 'self';
+object-src 'none';
+child-src 'self';
+script-src 'self' https://cdn.jsdelivr.net https://gc.zgo.at 'unsafe-inline';
+{%- endcapture -%}
+<meta http-equiv="Content-Security-Policy" content="{{ csp | strip }}" />
+<meta http-equiv="X-XSS-Protection" content="1;mode=block" always>
+<meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
+
+{%- include head.html -%}
+
+<body>
+  <div class="container">
+
+    {%- include header.html -%}
+
+    <main>
+      {{ content }}
+    </main>
+
+    {%- include footer.html -%}
+
+  </div>
+
+</body>
+
+</html>

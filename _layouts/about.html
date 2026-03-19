@@ -1,0 +1,74 @@
+---
+layout: default
+---
+
+<div class="about-page">
+
+  <div class="about-intro">{{ content }}</div>
+
+  <div class="about-contact">
+    <a href="mailto:{{ page.contact.email }}" class="contact-chip">{{ page.contact.email }}</a>
+    <a href="{{ page.contact.linkedin }}" class="contact-chip" rel="noopener noreferrer" target="_blank">linkedin</a>
+    <a href="{{ page.contact.github }}" class="contact-chip" rel="noopener noreferrer" target="_blank">github</a>
+  </div>
+
+  <hr class="about-hr">
+
+  <section class="about-section">
+    <h2 class="about-section-title">experiencia</h2>
+    {% for job in page.experience %}
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-role">{{ job.role }}</span>
+        <span class="exp-period">{{ job.period }}</span>
+      </div>
+      <span class="exp-org">{{ job.org }}</span>
+      {% if job.desc %}<p class="exp-desc">{{ job.desc }}</p>{% endif %}
+    </div>
+    {% endfor %}
+  </section>
+
+  <hr class="about-hr">
+
+  <section class="about-section">
+    <h2 class="about-section-title">educación</h2>
+    {% for edu in page.education %}
+    <div class="exp-item">
+      <div class="exp-header">
+        <span class="exp-role">{{ edu.degree }}</span>
+        <span class="exp-period">{{ edu.year }}</span>
+      </div>
+      <span class="exp-org">{{ edu.org }}</span>
+      {% if edu.desc %}<p class="exp-desc">{{ edu.desc }}</p>{% endif %}
+    </div>
+    {% endfor %}
+  </section>
+
+  <hr class="about-hr">
+
+  <section class="about-section">
+    <h2 class="about-section-title">certificaciones</h2>
+    <div class="certs-grid">
+      {% for cert_group in page.certs %}
+      <div class="cert-group">
+        <p class="cert-group-name">{{ cert_group.group }}</p>
+        <ul class="cert-list">
+          {% for item in cert_group.items %}
+          <li class="cert-item">
+            <div class="cert-item-header">
+              <span class="cert-name">{{ item.name }}</span>
+              <span class="cert-year">{{ item.year }}</span>
+            </div>
+            <div class="cert-meta">
+              {% if item.type %}<span class="cert-type">{{ item.type }}</span>{% endif %}
+              <span class="cert-org">{{ item.org }}</span>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+</div>

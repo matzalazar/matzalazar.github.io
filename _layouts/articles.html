@@ -1,0 +1,77 @@
+---
+layout: default
+---
+
+{% assign contentwonl = content | strip_newlines %}
+{% unless contentwonl == "" %}<br />{% endunless %}
+
+{% assign sorted_articles = site.articles | sort: "date" | reverse %}
+{% assign todas_count = site.articles | size %}
+{% assign arq_count   = site.articles | where: "category", "arquitectura"  | size %}
+{% assign dat_count   = site.articles | where: "category", "datos"         | size %}
+{% assign aut_count   = site.articles | where: "category", "automatizacion"| size %}
+{% assign sec_count   = site.articles | where: "category", "ciberseguridad"| size %}
+{% assign ser_count   = site.articles | where_exp: "item", "item.series != nil" | size %}
+
+<div class="articles-container">
+
+  <nav class="category-filter">
+    <a href="#" class="category-link active" data-category="todas">todas <span class="cat-count">{{ todas_count }}</span></a>
+    <a href="#" class="category-link" data-category="arquitectura">arquitectura <span class="cat-count">{{ arq_count }}</span></a>
+    <a href="#" class="category-link" data-category="datos">datos <span class="cat-count">{{ dat_count }}</span></a>
+    <a href="#" class="category-link" data-category="automatizacion">automatización <span class="cat-count">{{ aut_count }}</span></a>
+    <a href="#" class="category-link" data-category="ciberseguridad">ciberseguridad <span class="cat-count">{{ sec_count }}</span></a>
+    <a href="#" class="category-link" data-category="series">series <span class="cat-count">{{ ser_count }}</span></a>
+  </nav>
+
+  {%- if site.articles.size > 0 -%}
+
+  <!-- Sección SERIES -->
+  <section class="category-section series-section" data-category="series">
+    {% assign series_articles = sorted_articles | where_exp: "item", "item.series != nil" | group_by: "series" %}
+    {% for series_group in series_articles %}
+    <div class="series-group">
+      <p class="series-name">{{ series_group.name }}</p>
+      <ul class="articles-list">
+        {% assign series_sorted = series_group.items | sort: "series_part" %}
+        {% for article in series_sorted %}
+        <li class="article-item">
+          <div class="article-item-top">
+            <span class="article-date">{{ article.date | date: "%Y-%m-%d" }}</span>
+            <span class="series-badge">[{{ article.series_part }}/{{ article.series_total }}]</span>
+            <a href="{{ article.url | relative_url }}" class="article-title-link">{{ article.title | escape }}</a>
+          </div>
+          {% if article.description %}<p class="article-desc">{{ article.description }}</p>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </section>
+
+  <!-- Secciones por categoría -->
+  {% assign categories = "arquitectura,datos,automatizacion,ciberseguridad" | split: "," %}
+  {% for category in categories %}
+  {% assign cat_articles = sorted_articles | where: "category", category %}
+  {% if cat_articles.size > 0 %}
+  <section class="category-section" data-category="{{ category }}">
+    <p class="category-title">{{ category }}</p>
+    <ul class="articles-list">
+      {% for article in cat_articles %}
+      <li class="article-item">
+        <div class="article-item-top">
+          <span class="article-date">{{ article.date | date: "%Y-%m-%d" }}</span>
+          <a href="{{ article.url | relative_url }}" class="article-title-link">{{ article.title | escape }}</a>
+        </div>
+        {% if article.description %}<p class="article-desc">{{ article.description }}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+  {% endfor %}
+  {%- endif -%}
+
+</div>
+
+<script src="{{ '/assets/category-filter.js' | relative_url }}"></script>
