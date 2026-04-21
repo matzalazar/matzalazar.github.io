@@ -1,5 +1,5 @@
 ---
-title: /about
+title: sobre mí
 layout: about
 permalink: /about
 
@@ -8,17 +8,10 @@ contact:
   linkedin: https://www.linkedin.com/in/matzalazar/
   github: https://github.com/matzalazar
 
-experience:
-  - role: Desarrollador de software
-    org: Autónomo
-    period: "2020 – presente"
-    desc: "Diseño e implementación de aplicaciones web, sistemas de automatización y procesamiento de datos. Arquitectura de soluciones full-stack con énfasis en backend resiliente y escalable."
-  - role: Administrativo
-    org: Ministerio de Seguridad · Provincia de Buenos Aires
-    period: "2011 – presente"
-    desc: "Gestión administrativa y judicial con automatización de flujos de trabajo. Aplicación de herramientas informáticas para optimización de procesos y trazabilidad."
-
 education:
+  - degree: Licenciatura en Ciberdefensa
+    org: Universidad de la Defensa Nacional
+    year: "2026"
   - degree: Tecnicatura en Tecnologías de Programación
     org: Universidad Provincial del Sudoeste
     year: "2025"
@@ -76,6 +69,4 @@ certs:
         year: "2025"
 ---
 
-Desarrollador backend. Especializado en **automatización** y **diseño de sistemas evolutivos**.
-
-Mi enfoque: **aplicar ingeniería de software a problemas operativos reales**, con énfasis en modelado de dominio, automatización resiliente y sistemas que evolucionen a partir de feedback real.
+Desarrollador de software independiente con base en Bahía Blanca. Mi enfoque se centra en la creación de automatizaciones estratégicas, sistemas de gestión y aplicaciones diseñadas para resolver problemas reales del mundo de los negocios. Creo firmemente en que la tecnología debe adaptarse a la operación de cada organización, y no al revés.

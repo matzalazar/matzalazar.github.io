@@ -1,0 +1,45 @@
+/**
+ * Light theme - Editorial serif aesthetic
+ * Designed for commercial landing targeting SMBs
+ */
+
+@mixin theme() {
+  :root {
+    /* Primary palette */
+    --base-color: #2c4a3e;              /* Verde bosque - acento primario */
+    --background-color: #fafaf8;        /* Warm off-white */
+    --text-color: #1c1c1a;              /* Near-black cálido */
+
+    /* Accent colors */
+    --accent-warm: #7a6045;             /* Caramelo cálido */
+    --accent-muted: #6b6b67;            /* Gris apagado */
+
+    /* UI elements */
+    --border-color: #d8d5ce;            /* Gris cálido claro */
+    --border: solid 1px #e2e0da;
+    --selection-background: rgba(44, 74, 62, 0.15);
+    --selection-text: #1c1c1a;
+    --placeholder-color: rgba(28, 28, 26, 0.4);
+    --link-color: var(--base-color);
+
+    /* Code syntax highlighting - light theme (GitHub-style) */
+    --code-color-1: #9e9e9e;            /* Comments */
+    --code-color-2: #fff8e1;            /* Highlight background */
+    --code-color-3: #d73a49;            /* Errors */
+    --code-color-4: rgba(215, 58, 73, 0.08); /* Error background */
+    --code-color-5: #0033b3;            /* Keywords */
+    --code-color-6: #0550ae;            /* Preprocessor */
+    --code-color-7: #d73a49;            /* Deleted/Constants */
+    --code-color-8: #7a6045;            /* Headings */
+    --code-color-9: #008000;            /* Functions/Inserted/Strings */
+    --code-color-10: #9e9e9e;           /* Generic.Output */
+    --code-color-11: #6b6b67;           /* Generic.Prompt */
+    --code-color-12: #2c4a3e;           /* Subheading */
+    --code-color-13: #6f42c1;           /* Types/Builtins */
+    --code-color-14: #1750eb;           /* Numbers */
+    --code-color-15: #008000;           /* Strings */
+    --code-color-16: #0550ae;           /* Attributes */
+    --code-color-17: #d73a49;           /* Name.Entity */
+    --code-color-18: #1c1c1a;           /* Default code text */
+  }
+}

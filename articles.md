@@ -1,5 +1,5 @@
 ---
-title: /articles
+title: artículos
 layout: articles
 permalink: /articles
 ---

@@ -2,5 +2,40 @@
 layout: default
 ---
 
-{{ content }}
-{% assign contentwonl = content | strip_newlines %} {% unless contentwonl == "" %} <br /> {% endunless %}
+<section class="home-hero">
+  <h1>Ingeniería de software enfocada en resultados.</h1>
+  <p class="home-desc">Especialista en sistemas de gestión, automatización de procesos y arquitectura de datos. Software confiable para empresas que quieren dejar de gestionar a mano.</p>
+  <div class="home-cta-container">
+    <a href="{{ '/contacto' | relative_url }}" class="hero-cta">Hablemos →</a>
+  </div>
+</section>
+
+<section class="home-services-grid">
+  <div class="service-card">
+    <div class="service-card-content">
+      <h3>Automatización de Procesos</h3>
+      <p>Los procesos repetitivos de tu empresa —reportes, cargas, notificaciones— ejecutados en forma automática.</p>
+    </div>
+  </div>
+
+  <div class="service-card">
+    <div class="service-card-content">
+      <h3>Sistemas de Gestión</h3>
+      <p>Toda la información de tu empresa —clientes, stock, operaciones— en un solo sistema, confiable y accesible.</p>
+    </div>
+  </div>
+
+  <div class="service-card">
+    <div class="service-card-content">
+      <h3>Software a Medida</h3>
+      <p>Cuando las soluciones estándar no encajan con cómo trabaja tu empresa, construimos exactamente lo que necesitás.</p>
+    </div>
+  </div>
+
+  <div class="service-card">
+    <div class="service-card-content">
+      <h3>Atención Automatizada</h3>
+      <p>Un asistente en tu sitio que atiende consultas y captura datos de clientes, sin intervención manual.</p>
+    </div>
+  </div>
+</section>

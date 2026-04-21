@@ -2,9 +2,6 @@
 layout: default
 ---
 
-{% assign contentwonl = content | strip_newlines %}
-{% unless contentwonl == "" %}<br />{% endunless %}
-
 <div class="projects-container">
 
   {% assign sorted_projects = site.projects | sort: "date" | reverse %}

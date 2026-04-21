@@ -5,15 +5,16 @@ baseurl: ""
 lang: es
 
 header_pages:
-  - index.md
-  - articles.md
+  - servicios.md
+  - contacto.md
   - projects.md
   - about.md
+  - articles.md
 
-footer: 'Podés escribirme un <a href="mailto:matias.zalazar@icloud.com">mail</a> o conectarme en <a href="https://www.linkedin.com/in/matzalazar/">linkedin</a>'
+footer: '<a href="mailto:matias.zalazar@icloud.com">matias.zalazar@icloud.com</a> · <a href="https://www.linkedin.com/in/matzalazar/">LinkedIn</a> · <a href="https://github.com/matzalazar">GitHub</a>'
 
-# Nuevo tema: cyborg (terminal moderno refinado)
-style: cyborg
+# Tema editorial light
+style: light
 
 # Analytics
 goatcounter: matzalazar

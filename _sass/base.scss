@@ -3,12 +3,14 @@
 /**
  * Style variables
  */
-$base-font-family: 'Source Code Pro', monospace !default;
-$base-font-size: 14px !default;
-$mobile-font-size: 12.5px !default;
+$base-font-family: 'Lora', Georgia, serif !default;
+$heading-font-family: 'Playfair Display', Georgia, serif !default;
+$code-font-family: 'Source Code Pro', monospace !default;
+$base-font-size: 16px !default;
+$mobile-font-size: 14px !default;
 $base-line-height: 1.65 !default;
 $container-width: 90% !default;
-$container-max-width: 680px !default;
+$container-max-width: 720px !default;
 
 /**
  * Global
@@ -31,13 +33,17 @@ h3,
 h4,
 h5,
 h6 {
-    font-size: $base-font-size;
+    font-family: $heading-font-family;
     margin: 0px;
     margin-top: 28px;
     font-weight: bold;
     color: var(--text-color);
-    letter-spacing: 0.03em;
+    letter-spacing: 0.01em;
 }
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.45em; }
+h3 { font-size: 1.1em; }
 
 p,
 ul,
@@ -72,6 +78,13 @@ a:hover {
     max-width: $container-max-width;
     margin-right: auto;
     margin-left: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 p {
@@ -257,7 +270,7 @@ pre {
     font-size: $base-font-size;
     color: var(--text-color);
     line-height: 1.7 !important;
-    font-family: $base-font-family !important;
+    font-family: $code-font-family !important;
 }
 
 .highlight .hll {

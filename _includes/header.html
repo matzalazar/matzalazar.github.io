@@ -3,8 +3,7 @@
 <header>
   <div class="menu">
 
-    <span class="brand"><span style="color: var(--accent-orange);">$</span> {{ site.title | default: "matias zalazar"
-      }}</span>
+    <a href="{{ '/' | relative_url }}" class="brand">{{ site.title | default: "matias zalazar" }}</a>
 
     <ul class="menu-links">
       {%- for path in page_paths -%}
