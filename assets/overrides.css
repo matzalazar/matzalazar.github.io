@@ -1479,3 +1479,96 @@ body.fade-out {
     font-size: 1.15em;
   }
 }
+
+/* ========================================================================= */
+/* TYPOGRAPHY CONSISTENCY - HOME / SERVICIOS / CONTACTO                     */
+/* ========================================================================= */
+
+/* Reduce page-level headings on Servicios/Contacto without touching Home hero */
+.services-v2 .page-title,
+.contact-container .page-title {
+  font-size: clamp(2.05rem, 1.8rem + 0.95vw, 2.3rem) !important;
+  line-height: 1.12 !important;
+  margin-bottom: 1.1rem !important;
+}
+
+/* Keep service card title clearly above "Caso real" in visual hierarchy */
+.service-v2-title {
+  font-family: var(--heading-font-family);
+  font-size: clamp(1.32rem, 1.18rem + 0.55vw, 1.58rem);
+  line-height: 1.2;
+}
+
+.service-v2-case-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  opacity: 0.52;
+}
+
+/* Home footer legend should read as secondary metadata, especially on mobile */
+.hero-footer {
+  gap: 1.2rem;
+}
+
+.home-services-ref {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: none;
+}
+
+.home-service-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(44, 74, 62, 0.35);
+  border-radius: 999px;
+  padding: 0.34rem 0.86rem;
+  font-family: var(--code-font-family);
+  font-size: 0.76em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-color);
+  background: rgba(44, 74, 62, 0.08);
+  opacity: 0.9;
+  white-space: nowrap;
+}
+
+.hero-footer .hero-cta {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .services-v2 .page-title,
+  .contact-container .page-title {
+    font-size: 1.82rem !important;
+  }
+
+  .home-services-ref {
+    max-width: 100%;
+    gap: 0.45rem;
+  }
+
+  .home-service-pill {
+    font-size: 0.69em;
+    padding: 0.28rem 0.72rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-v2-title {
+    font-size: 1.3rem;
+  }
+
+  .service-v2-case-label {
+    font-size: 0.58rem;
+  }
+
+  .contact-intro {
+    margin-bottom: 3.2rem !important;
+  }
+}
