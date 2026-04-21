@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
-{%- capture csp -%}default-src 'none'; connect-src 'self' http://localhost:* https://*.pageclip.co https://*.goatcounter.com; base-uri 'self'; form-action http://localhost:* https://*.pageclip.co; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.pageclip.co; font-src 'self' https://fonts.gstatic.com data:; media-src 'self'; object-src 'none'; child-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://gc.zgo.at https://*.pageclip.co 'unsafe-inline';{%- endcapture -%}
+{%- capture csp -%}default-src 'none'; connect-src 'self' http://localhost:* https://*.pageclip.co https://*.goatcounter.com https://*.cloudflareinsights.com; base-uri 'self'; form-action http://localhost:* https://*.pageclip.co; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.pageclip.co; font-src 'self' https://fonts.gstatic.com data:; media-src 'self'; object-src 'none'; child-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://gc.zgo.at https://*.pageclip.co https://static.cloudflareinsights.com 'unsafe-inline';{%- endcapture -%}
 <meta http-equiv="Content-Security-Policy" content="{{ csp | strip }}" />
 <meta http-equiv="X-XSS-Protection" content="1;mode=block" always>
 <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
