@@ -6,7 +6,7 @@
 @mixin theme() {
   :root {
     /* Primary palette */
-    --base-color: #059669;              /* Verde Esmeralda oscuro - acento primario */
+    --base-color: #065f46;              /* Verde Esmeralda oscuro - acento primario */
     --background-color: #ffffff;        /* Blanco puro */
     --text-color: #1e293b;              /* Azul marino profundo */
 
@@ -17,7 +17,7 @@
     /* UI elements */
     --border-color: #e2e8f0;            /* Gris frío claro */
     --border: solid 1px #e2e8f0;
-    --selection-background: rgba(5, 150, 105, 0.25);
+    --selection-background: rgba(6, 95, 70, 0.25);
     --selection-text: #1e293b;
     --placeholder-color: rgba(30, 41, 59, 0.4);
     --link-color: var(--base-color);
