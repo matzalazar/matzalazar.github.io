@@ -32,9 +32,6 @@ certs:
         org: Google
         type: Certificado Profesional
         year: "2025"
-      - name: Social Engineering Expert
-        org: Packt
-        year: "2025"
   - group: data & machine learning
     items:
       - name: Data Engineering
@@ -48,12 +45,6 @@ certs:
         year: "2025"
       - name: Minería de Datos con Python
         org: UTN FRBA
-        year: "2025"
-  - group: fundamentos
-    items:
-      - name: Google IT Support
-        org: Google
-        type: Certificado Profesional
         year: "2025"
   - group: matemática
     items:
@@ -69,4 +60,6 @@ certs:
         year: "2025"
 ---
 
-Desarrollador de software independiente con base en Bahía Blanca. Mi enfoque se centra en la creación de automatizaciones estratégicas, sistemas de gestión y aplicaciones diseñadas para resolver problemas reales del mundo de los negocios. Creo firmemente en que la tecnología debe adaptarse a la operación de cada organización, y no al revés.
+Soy consultor en estrategias tecnológicas con base en Bahía Blanca. Trabajo con empresas que necesitan más que código: sistemas que resuelvan problemas operativos concretos, se sostengan en producción y se adapten a cómo trabaja cada organización — no al revés.
+
+Mi formación combina desarrollo de software, ciberseguridad y análisis de datos. Antes de escribir una línea de código, entiendo el proceso. Antes de proponer una solución, modelo el problema.
