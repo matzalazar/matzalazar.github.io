@@ -1537,6 +1537,7 @@ body.fade-out {
 
 /* Reduce page-level headings on Servicios/Contacto without touching Home hero */
 .services-v2 .page-title,
+.services-radical .page-title,
 .contact-container .page-title {
   font-size: clamp(1.52rem, 1.34rem + 0.4vw, 1.72rem) !important;
   line-height: 1.12 !important;
@@ -1595,6 +1596,7 @@ body.fade-out {
 
 @media (max-width: 768px) {
   .services-v2 .page-title,
+  .services-radical .page-title,
   .contact-container .page-title {
     font-size: 1.82rem !important;
   }
@@ -1880,5 +1882,125 @@ table {
     font-size: 16px;
   }
 }
+
+/* ========================================================================= */
+/* SERVICES RADICAL REDESIGN                                                 */
+/* ========================================================================= */
+
+.services-radical {
+  padding: 0 0 2rem;
+}
+
+.services-radical-header {
+  margin-bottom: 3.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1.5rem;
+}
+
+.services-radical-header p:not(.home-radical-kicker) {
+  margin: 0;
+  max-width: 60ch;
+}
+
+.services-radical-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.service-radical-item {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.service-radical-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.service-radical-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.service-radical-title {
+  font-family: var(--heading-font-family);
+  font-size: clamp(1.4rem, 1.2rem + 0.8vw, 1.8rem);
+  line-height: 1.2;
+  margin: 0;
+  color: var(--text-color);
+  letter-spacing: -0.01em;
+}
+
+.service-radical-desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  opacity: 0.75;
+  margin: 0;
+}
+
+/* Casos Reales */
+.service-radical-case {
+  background: rgba(6, 95, 70, 0.03);
+  border: 1px solid rgba(6, 95, 70, 0.1);
+  padding: 1.8rem;
+  border-radius: 8px;
+  position: relative;
+}
+
+.service-radical-case::before {
+  content: "\201C";
+  position: absolute;
+  top: -1.2rem;
+  left: 1.2rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 4rem;
+  line-height: 1;
+  color: rgba(6, 95, 70, 0.15);
+}
+
+.service-v2-case-label {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--base-color);
+  opacity: 0.8;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.service-radical-case p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  font-style: italic;
+  opacity: 0.85;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .service-radical-item {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-radical-list {
+    gap: 2.5rem;
+  }
+  .service-radical-item {
+    padding-bottom: 2.5rem;
+  }
+  .service-radical-case {
+    padding: 1.4rem;
+  }
+}
+
 
 
