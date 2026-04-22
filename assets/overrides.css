@@ -1988,8 +1988,17 @@ table {
 
 @media (max-width: 900px) {
   .service-radical-item {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
+  }
+
+  .service-radical-content {
+    order: 1;
+  }
+
+  .service-radical-case {
+    order: 2;
   }
 }
 
