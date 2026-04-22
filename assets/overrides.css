@@ -594,6 +594,16 @@ mjx-container[display="true"] mjx-math {
   border-color: rgba(6, 95, 70, 0.35);
 }
 
+.project-card .home-radical-tags {
+  justify-content: flex-end;
+}
+
+@media (min-width: 640px) {
+  .project-card--wide {
+    grid-column: 1 / -1;
+  }
+}
+
 .project-card-header {
   display: flex;
   justify-content: space-between;
