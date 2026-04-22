@@ -10,14 +10,12 @@ permalink: /contacto
     <h1 class="page-title">Hablemos</h1>
     <p class="contact-intro">Si tenés un desafío técnico, una idea de producto o necesitás optimizar procesos de negocio, escribime y vemos cómo puedo ayudarte.</p>
     
-    <div class="contact-methods" style="margin-top: 3rem; font-size: 0.9em;">
-      <p style="margin-bottom: 0.8rem; font-weight: bold; opacity: 0.8;">O contactame directamente:</p>
-      <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.8;">
-        <li><span style="opacity: 0.6; display: inline-block; width: 70px;">Email</span> <a href="mailto:contacto@matzalazar.com" style="text-decoration: none;">contacto@matzalazar.com</a></li>
-        <li><span style="opacity: 0.6; display: inline-block; width: 70px;">LinkedIn</span> <a href="https://www.linkedin.com/in/matzalazar/" target="_blank" rel="noopener" style="text-decoration: none;">/in/matzalazar</a></li>
-        <li><span style="opacity: 0.6; display: inline-block; width: 70px;">GitHub</span> <a href="https://github.com/matzalazar" target="_blank" rel="noopener" style="text-decoration: none;">/matzalazar</a></li>
-      </ul>
-    </div>
+    <ul class="contact-rows">
+      <li><a href="mailto:contacto@matzalazar.com"><span class="contact-row-label">Email</span><span class="contact-row-value">contacto@matzalazar.com</span><span class="contact-row-arrow" aria-hidden="true">→</span></a></li>
+      <li><a href="https://wa.me/5492915749529" target="_blank" rel="noopener"><span class="contact-row-label">WhatsApp</span><span class="contact-row-value">+54 9 291 574-9529</span><span class="contact-row-arrow" aria-hidden="true">→</span></a></li>
+      <li><a href="https://www.linkedin.com/in/matzalazar/" target="_blank" rel="noopener"><span class="contact-row-label">LinkedIn</span><span class="contact-row-value">/in/matzalazar</span><span class="contact-row-arrow" aria-hidden="true">→</span></a></li>
+      <li><a href="https://github.com/matzalazar" target="_blank" rel="noopener"><span class="contact-row-label">GitHub</span><span class="contact-row-value">/matzalazar</span><span class="contact-row-arrow" aria-hidden="true">→</span></a></li>
+    </ul>
   </div>
   
   <div class="contact-form-wrapper">

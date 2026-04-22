@@ -734,6 +734,56 @@ mjx-container[display="true"] mjx-math {
   text-align: justify;
 }
 
+.contact-rows {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.contact-rows li {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.contact-rows li::before {
+  display: none;
+  content: none;
+}
+
+.contact-rows a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.65rem 0.25rem;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 0.88em;
+  transition: color 0.15s ease, padding-left 0.15s ease;
+}
+
+.contact-rows a:hover {
+  color: var(--color-primary);
+  padding-left: 0.4rem;
+}
+
+.contact-row-label {
+  opacity: 0.5;
+  min-width: 80px;
+}
+
+.contact-row-value {
+  flex: 1;
+}
+
+.contact-row-arrow {
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.contact-rows a:hover .contact-row-arrow {
+  opacity: 1;
+}
+
 .about-contact {
   display: flex;
   flex-wrap: wrap;
