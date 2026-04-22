@@ -11,7 +11,7 @@ header_pages:
   - about.md
   - articles.md
 
-footer: '<a href="mailto:matias.zalazar@icloud.com">matias.zalazar@icloud.com</a> · <a href="https://www.linkedin.com/in/matzalazar/">LinkedIn</a> · <a href="https://github.com/matzalazar">GitHub</a>'
+footer: '<a href="mailto:contacto@matzalazar.com">contacto@matzalazar.com</a> · <a href="https://www.linkedin.com/in/matzalazar/">LinkedIn</a> · <a href="https://github.com/matzalazar">GitHub</a>'
 
 # Tema editorial light
 style: light

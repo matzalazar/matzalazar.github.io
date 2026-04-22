@@ -1,10 +1,10 @@
 ---
-title: sobre mí
+title: Sobre mí
 layout: about
 permalink: /about
 
 contact:
-  email: matias.zalazar@icloud.com
+  email: contacto@matzalazar.com
   linkedin: https://www.linkedin.com/in/matzalazar/
   github: https://github.com/matzalazar
 

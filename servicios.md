@@ -1,5 +1,5 @@
 ---
-title: servicios
+title: Servicios
 layout: page
 permalink: /servicios
 ---
