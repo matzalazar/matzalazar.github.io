@@ -8,8 +8,23 @@ permalink: /servicios
 
   <div class="services-radical-header">
     <p class="home-radical-kicker">servicios</p>
-    <h1 class="page-title">Alcance y Soluciones</h1>
-    <p class="home-radical-lead">Acompaño a empresas que buscan profesionalizar su operación mediante procesos digitales, datos confiables y sistemas que mejoran la productividad y la toma de decisiones.</p>
+    <h1 class="page-title">Qué hago y cómo puedo ayudarte.</h1>
+    <p class="home-radical-lead">Trabajo con empresas de distintos sectores para resolver problemas operativos concretos con software a medida.</p>
+  </div>
+
+  <div class="services-radical-stats">
+    <div class="services-stat">
+      <span class="services-stat-value">+6 años</span>
+      <span class="services-stat-label">en producción</span>
+    </div>
+    <div class="services-stat">
+      <span class="services-stat-value">+10</span>
+      <span class="services-stat-label">dominios</span>
+    </div>
+    <div class="services-stat">
+      <span class="services-stat-value">5</span>
+      <span class="services-stat-label">sectores</span>
+    </div>
   </div>
 
   <div class="services-radical-list">
@@ -26,14 +41,14 @@ permalink: /servicios
       </div>
       <div class="service-radical-case">
 
-        <p>Un cliente que perdía horas cada semana con la carga manual de datos reemplazó este proceso por una interfaz propia con validación automática. Los datos se ingresan una vez, se validan desde la interfaz y se generan los reportes en Excel, eliminando errores de tipeo y sin tener que recordar fórmulas complejas.</p>
+        <p>Una oficina procesaba datos manualmente cada semana: carga, validación y generación de reportes, todo a mano. Reemplazamos ese proceso con una interfaz propia que valida en el momento del ingreso y genera los reportes automáticamente. Hoy los datos se cargan una vez y el sistema hace el resto.</p>
       </div>
     </div>
 
     <div class="service-radical-item">
       <div class="service-radical-case">
 
-        <p>Una organización con personal en múltiples ubicaciones unificó el reporte de novedades a través de un portal propio. La información llega centralizada, en tiempo real, con reportes automáticos disponibles y sin necesidad de planillas en papel. Esto permitió mejorar la comunicación entre las distintas áreas y tener un mayor control sobre el personal en distintas ubicaciones, además de reducir significativamente el tiempo dedicado a la recopilación y procesamiento de información.</p>
+        <p>Una organización con personal en varias ubicaciones gestionaba las novedades con planillas en papel y llamadas. Construimos un portal centralizado donde la información llega en tiempo real y los reportes se generan solos. El equipo dejó de perseguir datos para empezar a analizarlos.</p>
       </div>
       <div class="service-radical-content">
         <h2 class="service-radical-title">Sistemas de Gestión</h2>
@@ -58,14 +73,14 @@ permalink: /servicios
       </div>
       <div class="service-radical-case">
 
-        <p>Un negocio con empleados bajo distintos convenios colectivos distribuía turnos manualmente, con poca visibilidad sobre sus costos. Desarrollamos un sistema que calcula y asigna los turnos automáticamente respetando las reglas de cada convenio. El cliente logró optimizar sus recursos, evitar horas extra innecesarias y mejorar la transparencia con su equipo.</p>
+        <p>Una empresa con personal bajo distintos convenios distribuía turnos a mano, sin visibilidad real sobre los costos. El sistema que construimos calcula y asigna turnos respetando automáticamente las reglas de cada convenio. Se eliminaron las horas extra innecesarias y, por primera vez, el costo real de cada decisión quedó visible.</p>
       </div>
     </div>
 
     <div class="service-radical-item">
       <div class="service-radical-case">
 
-        <p>Una empresa constructora implementó la arquitectura que propuse para un chatbot que responde las dudas típicas de interesados 24/7 a través de patrones determinísticos y orientando al cliente paso a paso a través del embudo de ventas. El resultado es que hoy los dueños se levantan con un panel lleno de contactos listos para cerrar la venta.</p>
+        <p>Una empresa constructora necesitaba atender consultas fuera del horario laboral sin depender de disponibilidad humana. Implementamos un chatbot determinístico que guía a los interesados paso a paso y captura sus datos de contacto. Hoy los dueños encuentran leads calificados esperándolos cada mañana.</p>
       </div>
       <div class="service-radical-content">
         <h2 class="service-radical-title">Atención Automatizada</h2>
@@ -90,7 +105,7 @@ permalink: /servicios
       </div>
       <div class="service-radical-case">
 
-        <p>Una empresa del sector de hidrocarburos tenía una web que no reflejaba la escala de su operación. Armamos un nuevo sitio web con mejor diseño, performance y enfoque en la conversión de contactos. El resultado fue una presencia profesional que atrajo más oportunidades de negocio.</p>
+        <p>Una empresa del sector de hidrocarburos tenía una presencia online que no reflejaba la escala de su operación. Rediseñamos el sitio con foco en credibilidad y conversión. El resultado: una presencia que acompaña al equipo comercial en lugar de contradecirlo.</p>
       </div>
     </div>
 
