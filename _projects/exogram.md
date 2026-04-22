@@ -4,7 +4,7 @@ title: "Exogram"
 repo: https://github.com/matzalazar/exogram
 description: "Red social de subrayados de lectura con búsqueda semántica local y diseño orientado a la privacidad."
 date: 2026-03-24
-tags: [python, django, vue, postgresql, celery, docker, embeddings, privacy, social]
+tags: [Django, Embeddings, Privacidad]
 permalink: /projects/exogram/
 ---
 

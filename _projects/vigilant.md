@@ -2,9 +2,9 @@
 layout: project
 title: "Vigilant"
 repo: https://github.com/matzalazar/vigilant
-description: "Suite de procesamiento forense de video."
+description: "Suite de procesamiento forense de video con análisis visual por IA local y cadena de custodia automatizada."
 date: 2026-02-08
-tags: [cybersecurity, forensic, python, ai, cctv]
+tags: [Ciberseguridad, Forense, IA Local]
 permalink: /projects/vigilant/
 ---
 

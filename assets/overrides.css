@@ -575,8 +575,11 @@ mjx-container[display="true"] mjx-math {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
+  /* CAMBIO: De flex a grid para dos columnas */
+  /* display: flex; */
+  /* flex-direction: column; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1rem;
 }
 
