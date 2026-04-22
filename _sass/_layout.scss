@@ -1,0 +1,104 @@
+/* ========================================================================= */
+/* LAYOUT Y ESPACIADO GENERAL                                                */
+/* ========================================================================= */
+
+body .container footer {
+  margin: 3rem 0 2rem;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.82em;
+  opacity: 0.45;
+  border-top: var(--border);
+}
+
+body .container footer a {
+  color: var(--text-color);
+  text-decoration: none;
+  opacity: 1;
+}
+
+header {
+  margin-top: 40px !important;
+  margin-bottom: 0 !important;
+}
+
+body .container main {
+  padding-top: 3.5rem !important;
+  padding-bottom: 1rem;
+}
+
+/* Reset del primer elemento de main en cualquier página */
+body .container main > *:first-child,
+body .container main > *:first-child > *:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Título de página unificado */
+.page-title {
+  font-family: var(--heading-font-family);
+  font-size: 2.6em !important;
+  line-height: 1.1 !important;
+  margin-top: 0 !important;
+  margin-bottom: 1.8rem !important;
+  color: var(--text-color);
+  letter-spacing: -0.02em !important;
+  font-weight: 700;
+}
+
+@media (max-width: 500px) {
+  .page-title {
+    font-size: 1.9em !important;
+  }
+}
+
+body .container main p {
+  line-height: 1.75;
+  margin: 0 0 1rem 0;
+}
+
+body .container main h1 + p {
+  margin-top: 0.3rem;
+}
+
+/* ========================================================================= */
+/* SEGURIDAD GLOBAL MOBILE                                                   */
+/* ========================================================================= */
+
+img,
+svg,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  body .container main {
+    overflow-x: clip;
+  }
+}
+
+/* ========================================================================= */
+/* TYPOGRAPHY CONSISTENCY - SERVICIOS / CONTACTO                            */
+/* ========================================================================= */
+
+.services-radical .page-title,
+.contact-container .page-title {
+  font-size: unquote("clamp(1.52rem, 1.34rem + 0.4vw, 1.72rem)") !important;
+  line-height: 1.12 !important;
+  margin-bottom: 0.85rem !important;
+}
+
+@media (max-width: 768px) {
+  .services-radical .page-title,
+  .contact-container .page-title {
+    font-size: 1.82rem !important;
+  }
+}

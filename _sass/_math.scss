@@ -1,0 +1,48 @@
+/* ========================================================================= */
+/* LATEX (MathJax)                                                           */
+/* ========================================================================= */
+
+mjx-container[display="true"] {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 1rem 0.5rem;
+  margin: 1rem 0 !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap !important;
+}
+
+mjx-container[display="true"] mjx-math {
+  margin: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  width: auto !important;
+  flex-shrink: 0 !important;
+}
+
+.MathJax_Display {
+  display: block !important;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  margin: 1.5rem 0 !important;
+  padding: 0.75rem 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  text-align: center;
+}
+
+.MathJax_Display > * {
+  display: inline-block;
+  white-space: nowrap;
+}

@@ -1,0 +1,225 @@
+/* ========================================================================= */
+/* HOME                                                                      */
+/* ========================================================================= */
+
+.home-radical {
+  padding: 2.2rem 0 3rem;
+}
+
+.home-radical-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.home-radical-copy {
+  align-self: center;
+}
+
+.home-radical-kicker {
+  margin: 0 0 0.95rem 0 !important;
+  font-family: var(--code-font-family);
+  font-size: 0.73rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--base-color);
+  opacity: 0.72;
+}
+
+.home-radical h1 {
+  margin: 0 0 1rem 0 !important;
+  font-family: var(--heading-font-family);
+  font-size: unquote("clamp(2rem, 1.55rem + 1.7vw, 3rem)") !important;
+  line-height: 1.04 !important;
+  letter-spacing: -0.024em;
+  max-width: 13ch;
+}
+
+.home-radical-lead {
+  margin: 0 !important;
+  font-size: 1.04rem;
+  line-height: 1.78;
+  max-width: 54ch;
+  opacity: 0.76;
+}
+
+.home-radical-inline-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: var(--code-font-family);
+  font-size: 0.74rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  opacity: 0.68;
+}
+
+.home-radical-inline-cta:hover {
+  opacity: 1;
+  color: var(--base-color);
+  background: transparent;
+}
+
+.home-radical-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+}
+
+.home-radical-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-top: 1.35rem;
+  grid-column: 1 / -1;
+}
+
+.home-radical-tags {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.42rem;
+  margin-top: 0;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.home-radical-tags span {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(6, 95, 70, 0.18);
+  background: transparent;
+  padding: 0.2rem 0.58rem;
+  font-family: var(--code-font-family);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-color);
+  opacity: 0.68;
+  white-space: nowrap;
+}
+
+.home-radical-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  align-self: center;
+}
+
+.home-radical-visual svg,
+.home-radical-visual img {
+  width: 100%;
+  height: auto;
+}
+
+body .container main .home-radical-visual img {
+  max-width: 240px;
+  margin: 0;
+  display: block;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media (max-width: 900px) {
+  .home-radical-grid {
+    grid-template-columns: minmax(0, 1fr) 160px;
+    gap: 1.8rem;
+  }
+
+  .home-radical-meta {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+    order: 3;
+  }
+
+  .home-radical-actions {
+    justify-content: flex-start;
+  }
+
+  .home-radical-copy {
+    order: 1;
+  }
+
+  .home-radical-visual {
+    order: 2;
+    display: flex;
+    opacity: 0.65;
+  }
+
+  body .container main .home-radical-visual img {
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-radical-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .home-radical-copy h1,
+  .home-radical-copy .home-radical-lead {
+    text-align: center;
+  }
+
+  .home-radical-visual {
+    order: 0;
+    justify-content: center;
+  }
+
+  body .container main .home-radical-visual img {
+    max-width: 80px;
+    margin: 0 auto;
+  }
+
+  .home-radical {
+    padding: 1rem 0 2.4rem;
+  }
+
+  .home-radical-kicker {
+    font-size: 0.66rem;
+  }
+
+  .home-radical h1 {
+    max-width: none;
+    font-size: 2rem !important;
+    line-height: 1.08 !important;
+  }
+
+  .home-radical-lead {
+    font-size: 0.94rem;
+    line-height: 1.68;
+  }
+
+  .home-radical-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+    width: 100%;
+  }
+
+  .home-radical-tags {
+    display: none;
+  }
+
+  .home-radical-actions {
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-radical-grid {
+    gap: 1.2rem;
+  }
+}

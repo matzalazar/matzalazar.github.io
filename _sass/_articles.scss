@@ -1,0 +1,103 @@
+/* ========================================================================= */
+/* ARTICLES - List                                                           */
+/* ========================================================================= */
+
+.articles-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+  margin: 0;
+}
+
+.article-item:last-child {
+  border-bottom: none;
+}
+
+.article-item::before {
+  display: none;
+}
+
+.article-item-top {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: nowrap;
+}
+
+.article-date {
+  color: var(--accent-warm);
+  font-size: 0.82em;
+  min-width: 88px;
+  flex-shrink: 0;
+  opacity: 0.65;
+}
+
+.article-title-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 0.95em;
+  line-height: 1.4;
+  transition: color 0.15s architectural;
+}
+
+.article-title-link:hover {
+  color: var(--base-color);
+  background: transparent;
+  text-decoration: none;
+}
+
+.article-desc {
+  font-size: 0.82em;
+  color: var(--text-color);
+  opacity: 0.4;
+  margin: 0.3rem 0 0 100px;
+  line-height: 1.45;
+  white-space: normal;
+}
+
+.article-tags {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .article-item-top {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .article-desc {
+    margin-left: 0;
+  }
+}
+
+/* ========================================================================= */
+/* SERIES                                                                   */
+/* ========================================================================= */
+
+/* Series nav inside article */
+.series-nav {
+  border-left: 2px solid var(--base-color);
+  padding: 0.8rem 1rem;
+  margin: 2rem 0;
+  background: transparent;
+  border-radius: 0;
+  opacity: 0.9;
+}
+
+.series-nav p {
+  margin-bottom: 0.5rem;
+  color: var(--base-color);
+}
+
+.series-nav ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0.3rem 0 0 0;
+}
+
+.series-nav li { margin: 0.3rem 0; }
+.series-nav strong { color: var(--accent-warm); }

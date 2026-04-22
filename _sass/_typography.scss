@@ -1,0 +1,62 @@
+/* ========================================================================= */
+/* TIPOGRAFÍA EN CONTENIDO                                                   */
+/* ========================================================================= */
+
+body .container main h2 {
+  color: var(--base-color);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  opacity: 0.9;
+}
+
+body .container main h3 {
+  margin-bottom: 0.6rem;
+  color: var(--text-color);
+  opacity: 0.85;
+}
+
+body .container main h3 + p,
+body .container main h3 + ul {
+  margin-top: 0.6rem;
+}
+
+body .container main ul {
+  margin: 1.2rem 0;
+  line-height: 1.85;
+}
+
+body .container main ul li {
+  margin: 0.5rem 0;
+}
+
+body .container main hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 3rem 0;
+  opacity: 0.3;
+}
+
+body .container main a {
+  color: var(--base-color);
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+body .container main a:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+  background-color: transparent;
+  color: var(--base-color);
+}
+
+body .container main strong {
+  color: var(--accent-warm);
+  font-weight: 600;
+}
+
+body .container main em {
+  color: var(--accent-muted);
+  font-style: italic;
+  opacity: 0.9;
+}

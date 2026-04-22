@@ -3,5 +3,18 @@
 
 @import "light";
 @import "base";
+@import "typography";
+@import "layout";
+@import "nav";
+@import "home";
+@import "images";
+@import "math";
+@import "code";
+@import "services";
+@import "articles";
+@import "projects";
+@import "about";
+@import "forms";
+@import "animations";
 
 @include theme();
