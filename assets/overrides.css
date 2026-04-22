@@ -1814,6 +1814,11 @@ body .container main .home-radical-visual img {
     gap: 1.5rem;
   }
 
+  .home-radical-copy h1,
+  .home-radical-copy .home-radical-lead {
+    text-align: center;
+  }
+
   .home-radical-visual {
     order: 0;
     justify-content: center;
