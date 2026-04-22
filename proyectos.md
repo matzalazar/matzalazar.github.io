@@ -1,7 +1,7 @@
 ---
 title: Proyectos
 layout: projects
-permalink: /projects
+permalink: /proyectos
 ---
 
 

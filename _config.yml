@@ -9,9 +9,9 @@ lang: es
 header_pages:
   - servicios.md
   - contacto.md
-  - projects.md
-  - about.md
-  - articles.md
+  - proyectos.md
+  - sobre-mi.md
+  - articulos.md
 
 footer: '<a href="mailto:contacto@matzalazar.com">contacto@matzalazar.com</a> · <a href="https://www.linkedin.com/in/matzalazar/">LinkedIn</a> · <a href="https://github.com/matzalazar">GitHub</a>'
 

@@ -1,7 +1,7 @@
 ---
 title: Artículos
 layout: articles
-permalink: /articles
+permalink: /articulos
 ---
 
 # artículos

@@ -1,7 +1,7 @@
 ---
 title: Sobre mí
 layout: about
-permalink: /about
+permalink: /sobre-mi
 
 contact:
   email: contacto@matzalazar.com
