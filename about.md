@@ -62,4 +62,4 @@ certs:
 
 Soy consultor en estrategias tecnológicas con base en Bahía Blanca. Trabajo con empresas que necesitan más que código: sistemas que resuelvan problemas operativos concretos, se sostengan en producción y se adapten a cómo trabaja cada organización — no al revés.
 
-Mi formación combina desarrollo de software, ciberseguridad y análisis de datos. Antes de escribir una línea de código, entiendo el proceso. Antes de proponer una solución, modelo el problema.
+Mi formación combina desarrollo de software, ciberseguridad y análisis de datos.
